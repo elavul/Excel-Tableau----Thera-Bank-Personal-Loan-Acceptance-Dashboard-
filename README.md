@@ -1,12 +1,25 @@
 # Excel-Tableau----SaaS-Revenue-Churn-Dashboard-Thera Bank
 
  
-![MySQL](https://img.shields.io/badge/-MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
 ![Tableau](https://img.shields.io/badge/-Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
 ![Excel](https://img.shields.io/badge/-Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
 
 Thera Bank is aiming to grow its base of *asset customers* (i.e., borrowers) since most of its current customers are *liability customers* (depositors). The bank earns more through interest on loans, so it wants to convert depositors into personal loan takers. A previous marketing campaign had a 9% conversion rate, which has encouraged further targeted efforts to increase loan adoption with minimal costs.
 
+### 📚 Table of Contents
+
+ [🎯 Aims of the Project](#-aims-of-the-project) <br>
+ [🗂️ Introducing the Dataset](#️-introducing-the-dataset)   <br>
+ [🧹 Pre-Analysis Steps](#-pre-analysis-steps)   <br>
+ [🎯 Key Insights](#-key-insights) <br>
+ [💼 Final thoughts & business initiatives](#-final-thoughts--business-initiatives) <br>
+ [⚠️ Challenges & Limitations](#-challenges--limitations) <br>
+ [🚀 What is Next](#-what-is-next)
+ > *“Data by itself is silent. Ask it the right questions, and it tells a story.”*
+<details>
+<summary><strong>📌 
+
+ 
 ### 🧠 About the Project: Thera Bank Personal Loan Dataset
 📦 Dataset:
 Imported from Kaggle.com: https://www.kaggle.com/datasets/itsmesunil/bank-loan-modelling/data
@@ -82,3 +95,5 @@ The dataset contains information about customers and their financial behavior. T
 * **Business Impact**: More efficient and cost-effective targeting in future campaigns.
 
 Would you like help exploring the data or building the predictive model next?
+
+### 🧹 Pre-Analysis Steps:
