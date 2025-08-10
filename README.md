@@ -97,3 +97,6 @@ The dataset contains information about customers and their financial behavior. T
 Would you like help exploring the data or building the predictive model next?
 
 ### 🧹 Pre-Analysis Steps:
+🎯 Methods I Used for Analysis:   </strong> </summary> 
+
+- Exploratory Data Analysis (EDA): Investigated data structure, table relationships, and schema to understand the database.
