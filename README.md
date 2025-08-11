@@ -6,6 +6,8 @@
 
 Thera Bank is aiming to grow its base of *asset customers* (i.e., borrowers) since most of its current customers are *liability customers* (depositors). The bank earns more through interest on loans, so it wants to convert depositors into personal loan takers. A previous marketing campaign had a 9% conversion rate, which has encouraged further targeted efforts to increase loan adoption with minimal costs.
 
+This case is about a bank (Thera Bank) whose management wants to explore ways of converting its liability customers to personal loan customers (while retaining them as depositors). A campaign that the bank ran last year for liability customers showed a healthy conversion rate of over 9% success. This has encouraged the retail marketing department to devise campaigns with better target marketing to increase the success ratio with minimal budget.
+
 ### 📚 Table of Contents
 
  [🎯 Aims of the Project](#-aims-of-the-project) <br>
@@ -24,7 +26,7 @@ Thera Bank is aiming to grow its base of *asset customers* (i.e., borrowers) sin
 
 In this project I acted as the data analyst for the Thera Bank company. My goal was to:
 - Help the bank identify which customers are more likely to accept a personal loan.
-
+- Help the bank identify high-probability customers, minimizing marketing costs and maximizing loan uptake.
 * Use this to make marketing more targeted and cost-effective. 
 
  Show how a company is growing (or struggling) with its recurring revenue, churn, and customer retention, using clean visuals and actionable insights.
@@ -119,12 +121,12 @@ What’s the percentage of loan takers?
 2. Create an additional pivot table to analyse which income groups are more or less likely to accept personal loans, if there are any trends between income level and loan acceptance rates
 Personal Loan Acceptance by Income Group.
  <img width="747" height="385" alt="image" src="https://github.com/user-attachments/assets/3c374e5b-2467-4107-b9c4-844f79596e5c" />
+<img width="965" height="575" alt="image" src="https://github.com/user-attachments/assets/05ad7369-d288-41cd-a5ac-57ea73870f0e" />
 
 The trends between income level and loan acceptance rate - This might suggest that loan acceptance increases with income - possibly due to better creditworthiness or greater borrowing confidence.
  
 ##### Insights:
-#####1. 
-. High-Income Groups Are More Likely to Accept Loans
+##### 1.High-Income Groups Are More Likely to Accept Loans
 In Income Group 100–149:
 
 Only 11% of customers rejected the loan.
@@ -141,6 +143,21 @@ That means 50% acceptance rate — very high!
 
 ✅ Insight: Loan acceptance rate increases significantly with income, especially starting from 100+ income brackets.
 Insight: Lower-income customers are not accepting personal loans at all. Could be due to lack of eligibility, interest, or need.
+
+3. Middle-Income Group 70–99 Shows Growing Acceptance
+This group is starting to show some interest:
+
+0.74% acceptance vs 21% rejection.
+
+Not very high in % terms but significantly better than lower brackets.
+4. High Acceptance in High-Income, but Small Numbers
+Group >200 has high income but very few people (only 19 total).
+
+Very small share of customer base (0.38%).
+
+✅ Insight: These customers might not need loans often, or it’s a small niche.
+
+✅ Insight: This income group could be a growing target segment for personal loans.
 
 #####2.Total Customer distribution:
 
