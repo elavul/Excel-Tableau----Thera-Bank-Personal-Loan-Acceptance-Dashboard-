@@ -80,11 +80,12 @@ The dataset contains information about customers and their financial behavior. T
 | **Family**             | Family size                                                     |
 | **CCAvg**              | Avg. monthly credit card spending (\$000)                       |
 | **Education**          | Education level (1 = Undergrad, 2 = Graduate, 3 = Professional) |
-| **Mortgage**           | Value of house mortgage (\$000)                                 |
-| **Securities Account** | Does the customer have a securities account? (0/1)              |
+| **Mortgage**           | Value of house mortgage if any (\$000)                          |
+| **Personal Loan**      | Did this customer accept the personal loan offered in the last campaign?|
+| **Securities Account** | Does the customer have a securities account with the bank? (0/1)|
 | **CD Account**         | Does the customer have a Certificate of Deposit account? (0/1)  |
 | **Online**             | Uses internet banking? (0/1)                                    |
-| **CreditCard**         | Uses a credit card issued by the bank? (0/1)                    |
+| **CreditCard**         | Does the customer use a credit card issued by UniversalBank? (0/1)|
 
  <img width="1293" height="799" alt="Screenshot 2025-08-10 223810" src="https://github.com/user-attachments/assets/af290b4e-3024-4eb4-a409-d03060ba80dc" />
 
@@ -102,11 +103,21 @@ Would you like help exploring the data or building the predictive model next?
 🎯 Methods I Used for Analysis:   </strong> </summary> 
 
 - Exploratory Data Analysis & cleaning??? (EDA): Investigated data structure, table relationships, and schema to understand the database.
-
-
-
+- 
+- Create a Pivot table to analyse how many people - This tells you how many customers accepted the loan, and what % they represent.
 Understand the distribution of the target variable:
 
 How many customers accepted the loan vs. how many did not?
 
 What’s the percentage of loan takers?
+
+
+ ### Analysis 
+ 1. We create a pivot tabel to see how many customers accepted the loan offered in the last campaign, and what % they represent 
+<img width="450" height="108" alt="image" src="https://github.com/user-attachments/assets/1132344d-c50d-4f1a-8a76-4a01f2b992e3" />
+2. Create an additional pivot table to analyse which income groups are more or less likely to accept personal loans, if there are any trends between income level and loan acceptance rates
+
+ <img width="747" height="385" alt="image" src="https://github.com/user-attachments/assets/3c374e5b-2467-4107-b9c4-844f79596e5c" />
+
+The trends between income level and loan acceptance rate - This might suggest that loan acceptance increases with income - possibly due to better creditworthiness or greater borrowing confidence.
+ 
