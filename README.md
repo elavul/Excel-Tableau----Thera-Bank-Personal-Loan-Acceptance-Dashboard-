@@ -115,9 +115,32 @@ What’s the percentage of loan takers?
  ### Analysis 
  1. We create a pivot tabel to see how many customers accepted the loan offered in the last campaign, and what % they represent 
 <img width="450" height="108" alt="image" src="https://github.com/user-attachments/assets/1132344d-c50d-4f1a-8a76-4a01f2b992e3" />
+<br>
 2. Create an additional pivot table to analyse which income groups are more or less likely to accept personal loans, if there are any trends between income level and loan acceptance rates
-
+Personal Loan Acceptance by Income Group.
  <img width="747" height="385" alt="image" src="https://github.com/user-attachments/assets/3c374e5b-2467-4107-b9c4-844f79596e5c" />
 
 The trends between income level and loan acceptance rate - This might suggest that loan acceptance increases with income - possibly due to better creditworthiness or greater borrowing confidence.
  
+##### Insights:
+#####1. 
+. High-Income Groups Are More Likely to Accept Loans
+In Income Group 100–149:
+
+Only 11% of customers rejected the loan.
+
+But 4.38% accepted — much higher acceptance rate compared to lower income brackets.
+
+They make up 15.38% of the total customer base.
+
+Income Group 150–199:
+
+Equal % of people accepted and rejected the loan (4.34% each).
+
+That means 50% acceptance rate — very high!
+
+✅ Insight: Loan acceptance rate increases significantly with income, especially starting from 100+ income brackets.
+Insight: Lower-income customers are not accepting personal loans at all. Could be due to lack of eligibility, interest, or need.
+
+#####2.Total Customer distribution:
+
