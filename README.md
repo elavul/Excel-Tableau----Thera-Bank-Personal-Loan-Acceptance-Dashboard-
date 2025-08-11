@@ -17,17 +17,13 @@ Thera Bank is aiming to grow its base of *asset customers* (i.e., borrowers) sin
  [🚀 What is Next](#-what-is-next)
  > *“Data by itself is silent. Ask it the right questions, and it tells a story.”*
 <details>
-<summary><strong>📌 
+<summary><strong>📌 </strong></summary></details>
 
- 
-### 🧠 About the Project: Thera Bank Personal Loan Dataset
-📦 Dataset:
-Imported from Kaggle.com: https://www.kaggle.com/datasets/itsmesunil/bank-loan-modelling/data
 
 ### 🎯 Aims of the Project:
 
 In this project I acted as the data analyst for the Thera Bank company. My goal was to:
-* Help the bank identify which customers are more likely to accept a personal loan.
+- Help the bank identify which customers are more likely to accept a personal loan.
 
 * Use this to make marketing more targeted and cost-effective. 
 
@@ -35,7 +31,9 @@ In this project I acted as the data analyst for the Thera Bank company. My goal 
 Help the bank identify which customers are more likely to accept a personal loan.
 
 Use this to make marketing more targeted and cost-effective
- 
+
+---
+
 #### **Business Goal:**
 
 * Build a **predictive model** to identify which liability customers are most likely to accept a **personal loan**.
@@ -63,6 +61,8 @@ Tableau -  Final interactive dashboard with KPIs
 ---
 
 #### ### 🗂️ Introducing the Dataset:
+📦 Dataset:
+Imported from Kaggle.com: https://www.kaggle.com/datasets/itsmesunil/bank-loan-modelling/data
 
 The dataset contains information about customers and their financial behavior. The main **target variable** is:
 
@@ -86,6 +86,8 @@ The dataset contains information about customers and their financial behavior. T
 | **Online**             | Uses internet banking? (0/1)                                    |
 | **CreditCard**         | Uses a credit card issued by the bank? (0/1)                    |
 
+ <img width="1293" height="799" alt="Screenshot 2025-08-10 223810" src="https://github.com/user-attachments/assets/af290b4e-3024-4eb4-a409-d03060ba80dc" />
+
 ---
 
 #### **Inspiration & Use Case:**
@@ -99,4 +101,12 @@ Would you like help exploring the data or building the predictive model next?
 ### 🧹 Pre-Analysis Steps:
 🎯 Methods I Used for Analysis:   </strong> </summary> 
 
-- Exploratory Data Analysis (EDA): Investigated data structure, table relationships, and schema to understand the database.
+- Exploratory Data Analysis & cleaning??? (EDA): Investigated data structure, table relationships, and schema to understand the database.
+
+
+
+Understand the distribution of the target variable:
+
+How many customers accepted the loan vs. how many did not?
+
+What’s the percentage of loan takers?
