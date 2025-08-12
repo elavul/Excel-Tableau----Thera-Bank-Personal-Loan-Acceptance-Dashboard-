@@ -160,12 +160,12 @@ Very small share of customer base (0.38%).
 ✅ Insight: This income group could be a growing target segment for personal loans.
 
 #### Education Levels vs Personal Loan Acceptance
-<img width="663" height="374" alt="image" src="https://github.com/user-attachments/assets/ef01b869-60e7-41d0-8500-1ca824a982d6" />
+<img width="663" height="374" alt="image" src="https://github.com/user-attachments/assets/ef01b869-60e7-41d0-8500-1ca824a982d6" /> <br>
 Education Level 3(Advanced/Professional) has the Highest Acceptance Rate, closely folowed by Level 2 (Graduate)
 🎯 Objective:
 The goal of this table is to analyze how education level correlates with acceptance of a personal loan offer.
 #### Education Levels + Online Banking vs Personal Loan Acceptance
-<img width="781" height="472" alt="image" src="https://github.com/user-attachments/assets/d2110d97-eff8-4a83-9b17-f34e9f3f440e" />
+
 <img width="1064" height="435" alt="image" src="https://github.com/user-attachments/assets/722fc81f-696e-4c57-bfbf-226822abe147" />
 
 
@@ -178,12 +178,12 @@ Lowest acceptance, but also largest group: Online users with only Undergrad (4.0
 While your overall data shows undergrads as poor targets, adding income, age, and tenure reveals that some subgroups of undergrads are actually strong prospects. Let's dive deeper and investigate :
 
 <img width="1049" height="752" alt="image" src="https://github.com/user-attachments/assets/3d891fdf-96db-448c-8df1-636d7323e7ed" />
-
+<br>
 Targeting strategy for customers with just undergraduates:
  
  2. <img width="467" height="292" alt="image" src="https://github.com/user-attachments/assets/65a38716-1104-49ce-b00a-4ab76f3cbe26" />
  3. <img width="800" height="544" alt="image" src="https://github.com/user-attachments/assets/9022f42b-b7a4-404e-8d30-68423cb481f8" />
-
+<br>
 Marketing :
 1. Loan Acceptance is Strongly Linked to Income Above 100K - only target undergrads if income > $100K and in the age range 31-60 years old
 2. with 3-4 members
@@ -207,4 +207,6 @@ Marketing :
 ##### CD Account + CCAvg + Securities Account vs. Loan Acceptance:
 <img width="1307" height="394" alt="image" src="https://github.com/user-attachments/assets/1bad3cc7-7684-4029-8ded-53bb66128eb7" />
 
+##### Mortgage vs Loan Acceptance:
+<img width="469" height="447" alt="image" src="https://github.com/user-attachments/assets/c4cfe19f-a7c2-4291-8ee0-d13ec8a220b3" />
 
