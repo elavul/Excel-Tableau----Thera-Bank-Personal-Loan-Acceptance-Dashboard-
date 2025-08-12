@@ -1,11 +1,12 @@
-# Excel-Tableau----SaaS-Revenue-Churn-Dashboard-Thera Bank
+# Thera Bank – Personal Loan Acceptance Dashboard
+(Customer Profiling + Targeting Strategy)
 
  
 ![Tableau](https://img.shields.io/badge/-Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
 ![Excel](https://img.shields.io/badge/-Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
 
 Thera Bank is aiming to grow its base of *asset customers* (i.e., borrowers) since most of its current customers are *liability customers* (depositors). The bank earns more through interest on loans, so it wants to convert depositors into personal loan takers. A previous marketing campaign had a 9% conversion rate, which has encouraged further targeted efforts to increase loan adoption with minimal costs.
-
+ 
 This case is about a bank (Thera Bank) whose management wants to explore ways of converting its liability customers to personal loan customers (while retaining them as depositors). A campaign that the bank ran last year for liability customers showed a healthy conversion rate of over 9% success. This has encouraged the retail marketing department to devise campaigns with better target marketing to increase the success ratio with minimal budget.
 
 ### 📚 Table of Contents
@@ -107,7 +108,8 @@ Would you like help exploring the data or building the predictive model next?
 🎯 Methods I Used for Analysis:   </strong> </summary> 
 
 - Exploratory Data Analysis & cleaning??? (EDA): Investigated data structure, table relationships, and schema to understand the database.
-- 
+- <img width="1778" height="306" alt="image" src="https://github.com/user-attachments/assets/24734d74-5ddd-4929-9c40-280d87009515" />
+
 - Create a Pivot table to analyse how many people - This tells you how many customers accepted the loan, and what % they represent.
 Understand the distribution of the target variable:
 
@@ -117,6 +119,7 @@ What’s the percentage of loan takers?
 
 
  ### We start by performing EDA: We are going to study and combine some variabels to uncover high-value customer segments
+ 1. 
  1. We create a pivot tabel to see how many customers accepted the loan offered in the last campaign, and what % they represen: 
 <img width="457" height="114" alt="image" src="https://github.com/user-attachments/assets/549d7ef5-5cb3-4644-b399-0474234ea7c5" />
 The overall acceptance rate: 9.60%
