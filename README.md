@@ -89,6 +89,8 @@ The dataset contains information about customers and their financial behavior. T
 | **Online**             | Uses internet banking? (0/1)                                    |
 | **CreditCard**         | Does the customer use a credit card issued by UniversalBank? (0/1)|
 
+A Certificate of Deposit is a type of savings account offered by banks that offers a higher interest rate in exchange for the customer agreeing to keep the money deposited for a fixed period, such as 6 months, 1 year, 5 years, etc.
+
  <img width="1293" height="799" alt="Screenshot 2025-08-10 223810" src="https://github.com/user-attachments/assets/af290b4e-3024-4eb4-a409-d03060ba80dc" />
 
 ---
@@ -175,9 +177,16 @@ Lowest acceptance, but also largest group: Online users with only Undergrad (4.0
 ### . Undergraduates:
 While your overall data shows undergrads as poor targets, adding income, age, and tenure reveals that some subgroups of undergrads are actually strong prospects. Let's dive deeper and investigate :
 
-<img width="1085" height="684" alt="image" src="https://github.com/user-attachments/assets/8a41dfd1-a48d-4404-8958-a8bb0e816873" />
+<img width="1049" height="752" alt="image" src="https://github.com/user-attachments/assets/3d891fdf-96db-448c-8df1-636d7323e7ed" />
+
 Targeting strategy for customers with just undergraduates:
- 1. Loan Acceptance is Strongly Linked to Income Above 100K - only target undergrads if income > $100K and in the age range 31-60 years old 
+ 
+ 2. <img width="467" height="292" alt="image" src="https://github.com/user-attachments/assets/65a38716-1104-49ce-b00a-4ab76f3cbe26" />
+ 3. <img width="800" height="544" alt="image" src="https://github.com/user-attachments/assets/9022f42b-b7a4-404e-8d30-68423cb481f8" />
+
+Marketing :
+1. Loan Acceptance is Strongly Linked to Income Above 100K - only target undergrads if income > $100K and in the age range 31-60 years old
+2. with 3-4 members
 
 ##### Age Group vs Personal Loan Acceptance:
 
@@ -185,5 +194,17 @@ Targeting strategy for customers with just undergraduates:
 <img width="528" height="491" alt="image" src="https://github.com/user-attachments/assets/db1c296a-3495-4059-a7a3-94b6aad17ac1" />....moistalek
 ##### Age Group vs Income Group vs Personal Loan Acceptance:
 
+##### CCAvg vs Personal Loan Acceptance:
+###### Low Credit Card Balance:
+- Better for avoiding debt and maintaining a low credit utilization ratio.
+- Helps improve or maintain a healthy credit score.
+- Too low a balance may result in missed rewards or lack of credit activity.
+###### High Credit Card Balance:
+- Can lead to high-interest charges and lower credit score.
+- Increases risk of accumulating debt.
+- Should be avoided if not manageable.
+
+##### CD Account + CCAvg + Securities Account vs. Loan Acceptance:
+<img width="1307" height="394" alt="image" src="https://github.com/user-attachments/assets/1bad3cc7-7684-4029-8ded-53bb66128eb7" />
 
 
