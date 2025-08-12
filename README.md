@@ -164,16 +164,26 @@ Education Level 3(Advanced/Professional) has the Highest Acceptance Rate, closel
 The goal of this table is to analyze how education level correlates with acceptance of a personal loan offer.
 #### Education Levels + Online Banking vs Personal Loan Acceptance
 <img width="781" height="472" alt="image" src="https://github.com/user-attachments/assets/d2110d97-eff8-4a83-9b17-f34e9f3f440e" />
-Insights:
- Online banking users with Graduate degrees and Advanced Degrees have high acceptance rates (14.07%, respectively 13.69%). This suggests that digital engagemnet 
-Lowest acceptance, but also largest group: Online users with only Undergrad (4.06%). Possibly due to lower income, lower credit scores.
+<img width="1064" height="435" alt="image" src="https://github.com/user-attachments/assets/722fc81f-696e-4c57-bfbf-226822abe147" />
 
-### . 
-Helps refine targeting strategy — e.g., “Only target undergrads if income > $100K”
+
+Insights:
+ Online banking users with Graduate degrees and Advanced Degrees have high acceptance rates (14.07%, respectively 13.69%). It looks like digital tools only really help people respond better when they already have a good understanding of finances. 
+Lowest acceptance, but also largest group: Online users with only Undergrad (4.06%). Possibly due to lower income, lower credit scores. Interesting to investigate if undergrads with high income are still not accepting loans, or if younger undergrands are more willing to take out a loan than older ones.
+
+
+### . Undergraduates:
+While your overall data shows undergrads as poor targets, adding income, age, and tenure reveals that some subgroups of undergrads are actually strong prospects. Let's dive deeper and investigate :
+
+<img width="1085" height="684" alt="image" src="https://github.com/user-attachments/assets/8a41dfd1-a48d-4404-8958-a8bb0e816873" />
+Targeting strategy for customers with just undergraduates:
+ 1. Loan Acceptance is Strongly Linked to Income Above 100K - only target undergrads if income > $100K and in the age range 31-60 years old 
 
 ##### Age Group vs Personal Loan Acceptance:
 
 <img width="389" height="148" alt="image" src="https://github.com/user-attachments/assets/7ef98cce-7d30-4c0c-bb79-02a679c4d76c" />
 <img width="528" height="491" alt="image" src="https://github.com/user-attachments/assets/db1c296a-3495-4059-a7a3-94b6aad17ac1" />
 ##### Age Group vs Income Group vs Personal Loan Acceptance:
+
+
 
