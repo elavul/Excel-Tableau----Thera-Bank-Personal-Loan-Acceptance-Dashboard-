@@ -210,3 +210,7 @@ Marketing :
 ##### Mortgage vs Loan Acceptance:
 <img width="469" height="447" alt="image" src="https://github.com/user-attachments/assets/c4cfe19f-a7c2-4291-8ee0-d13ec8a220b3" />
 
+##### Mortgage vs CCAvg vs Loan Acceptance:
+<img width="794" height="410" alt="image" src="https://github.com/user-attachments/assets/fcc98689-e312-4321-8e17-e4bdda70b3c0" />
+
+
