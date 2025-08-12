@@ -162,9 +162,18 @@ Very small share of customer base (0.38%).
 Education Level 3(Advanced/Professional) has the Highest Acceptance Rate, closely folowed by Level 2 (Graduate)
 🎯 Objective:
 The goal of this table is to analyze how education level correlates with acceptance of a personal loan offer.
+#### Education Levels + Online Banking vs Personal Loan Acceptance
+<img width="781" height="472" alt="image" src="https://github.com/user-attachments/assets/d2110d97-eff8-4a83-9b17-f34e9f3f440e" />
+Insights:
+ Online banking users with Graduate degrees and Advanced Degrees have high acceptance rates (14.07%, respectively 13.69%). This suggests that digital engagemnet 
+Lowest acceptance, but also largest group: Online users with only Undergrad (4.06%). Possibly due to lower income, lower credit scores.
+
+### . 
+Helps refine targeting strategy — e.g., “Only target undergrads if income > $100K”
 
 ##### Age Group vs Personal Loan Acceptance:
 
 <img width="389" height="148" alt="image" src="https://github.com/user-attachments/assets/7ef98cce-7d30-4c0c-bb79-02a679c4d76c" />
 <img width="528" height="491" alt="image" src="https://github.com/user-attachments/assets/db1c296a-3495-4059-a7a3-94b6aad17ac1" />
 ##### Age Group vs Income Group vs Personal Loan Acceptance:
+
