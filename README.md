@@ -114,15 +114,14 @@ How many customers accepted the loan vs. how many did not?
 What’s the percentage of loan takers?
 
 
- ### Analysis 
- 1. We create a pivot tabel to see how many customers accepted the loan offered in the last campaign, and what % they represent 
-<img width="450" height="108" alt="image" src="https://github.com/user-attachments/assets/1132344d-c50d-4f1a-8a76-4a01f2b992e3" />
+ ### We start by performing EDA: We are going to study and combine some variabels to uncover high-value customer segments
+ 1. We create a pivot tabel to see how many customers accepted the loan offered in the last campaign, and what % they represen: 
+<img width="457" height="114" alt="image" src="https://github.com/user-attachments/assets/549d7ef5-5cb3-4644-b399-0474234ea7c5" />
+The overall acceptance rate: 9.60%
 <br>
-2. Create an additional pivot table to analyse which income groups are more or less likely to accept personal loans, if there are any trends between income level and loan acceptance rates
+2. Create an additional pivot table to analyse and compare which income groups are more or less likely to accept personal loans, if there are any trends between income level and loan acceptance rates
 Personal Loan Acceptance by Income Group.
- <img width="747" height="385" alt="image" src="https://github.com/user-attachments/assets/3c374e5b-2467-4107-b9c4-844f79596e5c" />
 <img width="965" height="575" alt="image" src="https://github.com/user-attachments/assets/05ad7369-d288-41cd-a5ac-57ea73870f0e" />
-
 The trends between income level and loan acceptance rate - This might suggest that loan acceptance increases with income - possibly due to better creditworthiness or greater borrowing confidence.
  
 ##### Insights:
@@ -156,8 +155,16 @@ Group >200 has high income but very few people (only 19 total).
 Very small share of customer base (0.38%).
 
 ✅ Insight: These customers might not need loans often, or it’s a small niche.
-
 ✅ Insight: This income group could be a growing target segment for personal loans.
 
-#####2.Total Customer distribution:
+#### Education Levels vs Personal Loan Acceptance
+<img width="663" height="374" alt="image" src="https://github.com/user-attachments/assets/ef01b869-60e7-41d0-8500-1ca824a982d6" />
+Education Level 3(Advanced/Professional) has the Highest Acceptance Rate, closely folowed by Level 2 (Graduate)
+🎯 Objective:
+The goal of this table is to analyze how education level correlates with acceptance of a personal loan offer.
 
+##### Age Group vs Personal Loan Acceptance:
+
+<img width="389" height="148" alt="image" src="https://github.com/user-attachments/assets/7ef98cce-7d30-4c0c-bb79-02a679c4d76c" />
+<img width="528" height="491" alt="image" src="https://github.com/user-attachments/assets/db1c296a-3495-4059-a7a3-94b6aad17ac1" />
+##### Age Group vs Income Group vs Personal Loan Acceptance:
