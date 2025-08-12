@@ -182,7 +182,7 @@ Targeting strategy for customers with just undergraduates:
 ##### Age Group vs Personal Loan Acceptance:
 
 <img width="389" height="148" alt="image" src="https://github.com/user-attachments/assets/7ef98cce-7d30-4c0c-bb79-02a679c4d76c" />
-<img width="528" height="491" alt="image" src="https://github.com/user-attachments/assets/db1c296a-3495-4059-a7a3-94b6aad17ac1" />
+<img width="528" height="491" alt="image" src="https://github.com/user-attachments/assets/db1c296a-3495-4059-a7a3-94b6aad17ac1" />....moistalek
 ##### Age Group vs Income Group vs Personal Loan Acceptance:
 
 
