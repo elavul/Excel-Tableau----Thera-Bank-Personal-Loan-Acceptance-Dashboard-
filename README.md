@@ -65,7 +65,7 @@ The dataset contains demographic and financial attributes of 5,000 Thera Bank cu
 The dataset contains information about customers and their financial behavior. The main **target variable** is:
 * **Personal Loan**: Whether the customer accepted the loan offer during the last campaign (1 = Yes, 0 = No)
 
-<details><summary>#### **Features (Columns):**</summary>
+<details><summary> **Features (Columns):**</summary>
 
 | Feature            | Description                                              |
 |--------------------|----------------------------------------------------------|
@@ -85,12 +85,6 @@ The dataset contains information about customers and their financial behavior. T
 
 - A Certificate of Deposit is a type of savings account offered by banks that offers a higher interest rate in exchange for the customer agreeing to keep the money deposited for a fixed period, such as 6 months, 1 year, 5 years, etc.
 
-I also added **additional helper columns** to the dataset, particularly where certain variables needed to be **binned or grouped** to support a more straightforward and meaningful analysis.
-
-This allowed for:
-- Cleaner segmentation (e.g., income ranges, age brackets)
-- Easier trend identification across categorical variables
-- Improved clarity in pivot tables and visualizations
 
 </details>
 
@@ -99,9 +93,15 @@ This allowed for:
 ### 🧹 Pre-Analysis Steps:
 
 - Performed **initial data profiling** to assess column types, nulls, and distributions
-- Final cleaned dtaset:
+- Final cleaned dataset:
 - <img width="1778" height="306" alt="image" src="https://github.com/user-attachments/assets/24734d74-5ddd-4929-9c40-280d87009515" />
 
+I also added **additional helper columns** to the dataset, particularly where certain variables needed to be **binned or grouped** to support a more straightforward and meaningful analysis.
+
+This allowed for:
+- Cleaner segmentation (e.g., income ranges, age brackets)
+- Easier trend identification across categorical variables
+- Improved clarity in pivot tables and visualizations
 ----
 ### 🧭 Variable Prioritization Strategy (Based on Correlation)
 - Focused on **loan response rate** across different customer attributes
@@ -119,7 +119,8 @@ This helped me:
 <img width="974" height="217" alt="image" src="https://github.com/user-attachments/assets/ed785391-4d35-4fc4-995b-c0e8a5df3a3b" />
 
 
-----
+---
+
 ##  Exploratory Data Analysis (EDA)
 ---
 #### Initial Pivot Table: Loan Acceptance Overview
@@ -134,6 +135,7 @@ Firstly, I created a pivot table to analyze how many customers accepted the pers
  <br>
 - Highly imbalanced data — needs attention in modeling phase
 <br>
+
 ----
 
 #### Income Groups vs Loan Acceptance:
