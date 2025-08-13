@@ -9,8 +9,15 @@ Thera Bank is aiming to grow its base of *asset customers* (i.e., borrowers) sin
  
 This case is about a bank (Thera Bank) whose management wants to explore ways of converting its liability customers to personal loan customers (while retaining them as depositors). A campaign that the bank ran last year for liability customers showed a healthy conversion rate of over 9% success. This has encouraged the retail marketing department to devise campaigns with better target marketing to increase the success ratio with minimal budget.
 
-### 📚 Table of Contents
 
+### 📚 Table of Contents
+## 1. Business Objective
+## 2. Tools Used
+## 3. Dataset Overview
+## 4. Exploratory Data Analysis (EDA)
+## 5. Key Insights
+## 6. Recommendations
+## 7. Limitations & Next Steps
  [🎯 Aims of the Project](#-aims-of-the-project) <br>
  [🗂️ Introducing the Dataset](#️-introducing-the-dataset)   <br>
  [🧹 Pre-Analysis Steps](#-pre-analysis-steps)   <br>
@@ -28,7 +35,9 @@ This case is about a bank (Thera Bank) whose management wants to explore ways of
 In this project I acted as the data analyst for the Thera Bank company. My goal was to:
 - Help the bank identify which customers are more likely to accept a personal loan.
 - Help the bank identify high-probability customers, minimizing marketing costs and maximizing loan uptake.
-* Use this to make marketing more targeted and cost-effective. 
+* Use this to make marketing more targeted and cost-effective.
+* 
+* Objective: Build a classification model to predict which liability customers are most likely to accept a personal loan, enabling Thera Bank to run cost-effective, targeted marketing campaigns.
 
  Show how a company is growing (or struggling) with its recurring revenue, churn, and customer retention, using clean visuals and actionable insights.
 Help the bank identify which customers are more likely to accept a personal loan.
@@ -67,11 +76,13 @@ Tableau -  Final interactive dashboard with KPIs
 📦 Dataset:
 Imported from Kaggle.com: https://www.kaggle.com/datasets/itsmesunil/bank-loan-modelling/data
 
+The dataset contains demographic and financial attributes of 5,000 Thera Bank customers. The goal is to identify patterns among those who accepted a personal loan during a previous campaign
+
 The dataset contains information about customers and their financial behavior. The main **target variable** is:
 
 * **Personal Loan**: Whether the customer accepted the loan offer during the last campaign (1 = Yes, 0 = No)
 
-#### **Features (Columns):**
+<details><summary>#### **Features (Columns):**
 
 | Column                 | Description                                                     |
 | ---------------------- | --------------------------------------------------------------- |
@@ -91,6 +102,8 @@ The dataset contains information about customers and their financial behavior. T
 | **CreditCard**         | Does the customer use a credit card issued by UniversalBank? (0/1)|
 
 A Certificate of Deposit is a type of savings account offered by banks that offers a higher interest rate in exchange for the customer agreeing to keep the money deposited for a fixed period, such as 6 months, 1 year, 5 years, etc.
+
+</summary></details>
 
  <img width="1293" height="799" alt="Screenshot 2025-08-10 223810" src="https://github.com/user-attachments/assets/af290b4e-3024-4eb4-a409-d03060ba80dc" />
 
