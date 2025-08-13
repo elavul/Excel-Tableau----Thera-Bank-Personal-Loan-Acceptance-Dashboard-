@@ -110,7 +110,7 @@ This allowed for:
 </details>
 
 ----
-### What Influences Decisions? Ranking Variables by Correlation 
+### What Influences Decisions? Ranking Variables by Correlation (Heatmap)
  
 Before diving into pivot tables and EDA, I used a correlation matrix to quickly identify which features had a meaningful relationship with our target: Loan Acceptance.
 
