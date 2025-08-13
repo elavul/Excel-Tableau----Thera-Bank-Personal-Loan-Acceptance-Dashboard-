@@ -70,7 +70,6 @@ This is a **binary classification problem**:
 The dataset contains demographic and financial attributes of 5,000 Thera Bank customers. The goal is to identify patterns among those who accepted a personal loan during a previous campaign
 
 The dataset contains information about customers and their financial behavior. The main **target variable** is:
-
 * **Personal Loan**: Whether the customer accepted the loan offer during the last campaign (1 = Yes, 0 = No)
 
 <details><summary>#### **Features (Columns):**</summary>
@@ -91,8 +90,10 @@ The dataset contains information about customers and their financial behavior. T
 | Online             | Uses internet banking (0/1)                              |
 | CreditCard         | Has a bank-issued credit card (0/1)                      |
 
-I also added additional columns when I considered some variables need to be bined to offer a more straightforward analysis.
-A Certificate of Deposit is a type of savings account offered by banks that offers a higher interest rate in exchange for the customer agreeing to keep the money deposited for a fixed period, such as 6 months, 1 year, 5 years, etc.
+- A Certificate of Deposit is a type of savings account offered by banks that offers a higher interest rate in exchange for the customer agreeing to keep the money deposited for a fixed period, such as 6 months, 1 year, 5 years, etc.
+
+I also added additional columns, helper columns, where  when I considered some variables need to be bined to offer a more straightforward analysis.
+
 
 </details>
 
@@ -102,36 +103,39 @@ A Certificate of Deposit is a type of savings account offered by banks that offe
 ### 🧹 Pre-Analysis Steps:
 
 - Performed **initial data profiling** to assess column types, nulls, and distributions
+- Final cleaned dtaset:
+- <img width="1778" height="306" alt="image" src="https://github.com/user-attachments/assets/24734d74-5ddd-4929-9c40-280d87009515" />
 - Conducted **exploratory analysis** with pivot tables in Excel
 - Focused on **loan response rate** across different customer attributes
 - Identified patterns in **income**, **education**, **online banking**, and **credit card usage**
 
-- <img width="1778" height="306" alt="image" src="https://github.com/user-attachments/assets/24734d74-5ddd-4929-9c40-280d87009515" />
 
 
 
+### 🎯 Key Insights:
 
- ### We start by performing EDA: We are going to study and combine some variabels to uncover high-value customer segments
- 1. 
- 1. We create a pivot tabel to see how many customers accepted the loan offered in the last campaign, and what % they represen: 
-<img width="457" height="114" alt="image" src="https://github.com/user-attachments/assets/549d7ef5-5cb3-4644-b399-0474234ea7c5" />
-The overall acceptance rate: 9.60%
+#### ✅ Loan Acceptance Rate:
+
+Firstly, I created a pivot table to see how many customers accepted the loan offered in the last campaign, and what % they represent: 
+<img width="870" height="183" alt="image" src="https://github.com/user-attachments/assets/bc89f306-5892-4b3a-90f9-e82d3812c9f1" />
+
 <br>
-2. Create an additional pivot table to analyse and compare which income groups are more or less likely to accept personal loans, if there are any trends between income level and loan acceptance rates
-Personal Loan Acceptance by Income Group.
+ **Overall acceptance rate** = 9.60%
+- Highly imbalanced data — needs attention in modeling phase
+<br>
+
+#### 💰 Income Groups vs Loan Acceptance:
+After, I created an additional pivot table to analyse and compare which income groups are more or less likely to accept personal loans, and if there are any trends between income level and loan acceptance rates.
+
 <img width="965" height="575" alt="image" src="https://github.com/user-attachments/assets/05ad7369-d288-41cd-a5ac-57ea73870f0e" />
 The trends between income level and loan acceptance rate - This might suggest that loan acceptance increases with income - possibly due to better creditworthiness or greater borrowing confidence.
 
------ Create a Pivot table to analyse how many people - This tells you how many customers accepted the loan, and what % they represent.
-Understand the distribution of the target variable:
+- Customers with **income > \$100K** showed significantly higher acceptance
+- Income group **150–199K** had a **50% acceptance rate**
+- High-income customers are prime targets
 
-How many customers accepted the loan vs. how many did not?
-
-What’s the percentage of loan takers?
- 
-## 📊 Key Analysis & Insights
-### 🎯 1. Loan Acceptance Rate
-##### 1.High-Income Groups Are More Likely to Accept Loans
+<details>
+#### In=depth analysis:
 In Income Group 100–149:
 
 Only 11% of customers rejected the loan.
@@ -163,11 +167,15 @@ Very small share of customer base (0.38%).
 ✅ Insight: These customers might not need loans often, or it’s a small niche.
 ✅ Insight: This income group could be a growing target segment for personal loans.
 
-#### Education Levels vs Personal Loan Acceptance
+
+
+
+#### Education Levels vs Personal Loan Acceptance:
 <img width="663" height="374" alt="image" src="https://github.com/user-attachments/assets/ef01b869-60e7-41d0-8500-1ca824a982d6" /> <br>
 Education Level 3(Advanced/Professional) has the Highest Acceptance Rate, closely folowed by Level 2 (Graduate)
 🎯 Objective:
 The goal of this table is to analyze how education level correlates with acceptance of a personal loan offer.
+
 #### Education Levels + Online Banking vs Personal Loan Acceptance
 
 <img width="1064" height="435" alt="image" src="https://github.com/user-attachments/assets/722fc81f-696e-4c57-bfbf-226822abe147" />
