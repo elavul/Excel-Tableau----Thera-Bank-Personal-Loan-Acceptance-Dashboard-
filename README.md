@@ -10,19 +10,12 @@ Thera Bank, with a large depositor base, aims to grow its loan portfolio by conv
 This project uses data analysis and visualisation to explore customer behavior and identify patterns among those who accepted a personal loan in a previous campaign. It delivers strategic insights and a dashboard that highlights actionable segments for future marketing efforts.
 
 ---
-
-### 📚 Table of Contents
-## 1. Business Objective
-## 2. Tools Used
-## 3. Dataset Overview
-## 4. Exploratory Data Analysis (EDA)
-## 5. Key Insights
-## 6. Recommendations
-## 7. Limitations & Next Steps
  [🎯 Aims of the Project](#-aims-of-the-project) <br>
+ [Business Goal](#-business-goal) <br>
+  [🚀 Tools used](#-tools-used) <br>
  [🗂️ Introducing the Dataset](#️-introducing-the-dataset)   <br>
  [🧹 Pre-Analysis Steps](#-pre-analysis-steps)   <br>
- [🎯 Key Insights](#-key-insights) <br>
+ [🎯 Key Insights](#-key-insights) <br>   
  [💼 Final thoughts & business initiatives](#-final-thoughts--business-initiatives) <br>
  [⚠️ Challenges & Limitations](#-challenges--limitations) <br>
  [🚀 What is Next](#-what-is-next)
@@ -64,9 +57,9 @@ This is a **binary classification problem**:
 | Dashboard & Visualization   | Tableau Public                |
 | Data Source                 | [Kaggle Dataset](https://www.kaggle.com/datasets/itsmesunil/bank-loan-modelling/data) |
 
----
 
-#### ### 🗂️ Introducing the Dataset:
+
+### 🗂️ Introducing the Dataset:
 The dataset contains demographic and financial attributes of 5,000 Thera Bank customers. The goal is to identify patterns among those who accepted a personal loan during a previous campaign
 
 The dataset contains information about customers and their financial behavior. The main **target variable** is:
@@ -103,40 +96,53 @@ This allowed for:
 
  <img width="1293" height="799" alt="Screenshot 2025-08-10 223810" src="https://github.com/user-attachments/assets/af290b4e-3024-4eb4-a409-d03060ba80dc" />
 
----
 ### 🧹 Pre-Analysis Steps:
 
 - Performed **initial data profiling** to assess column types, nulls, and distributions
 - Final cleaned dtaset:
 - <img width="1778" height="306" alt="image" src="https://github.com/user-attachments/assets/24734d74-5ddd-4929-9c40-280d87009515" />
-- Conducted **exploratory analysis** with pivot tables in Excel
+
+----
+### 🧭 Variable Prioritization Strategy (Based on Correlation)
 - Focused on **loan response rate** across different customer attributes
 - Identified patterns in **income**, **education**, **online banking**, and **credit card usage**
+- 
+Before diving into pivot tables and EDA, I used a correlation matrix to quickly identify which features had a meaningful relationship with our target: Loan Acceptance.
+
+This helped me:
+
+- Focus efforts on top predictors like **Annual Income**, **CCAvg**, and **CD Account**
+- Ignore low-signal variables like **Age** and **Family Size**
+- Avoid multicollinearity by choosing between strongly linked variables like **Income vs. CCAvg**
+
+<img width="977" height="679" alt="image" src="https://github.com/user-attachments/assets/c788cb24-103c-488a-8606-91fcfee3a3f1" />
+<img width="974" height="217" alt="image" src="https://github.com/user-attachments/assets/ed785391-4d35-4fc4-995b-c0e8a5df3a3b" />
+
+
 ----
-
-### 🎯 Key Insights:
-
-#### ✅ Initial Pivot Table: Loan Acceptance Overview
+##  Exploratory Data Analysis (EDA)
+---
+#### Initial Pivot Table: Loan Acceptance Overview
 
 Firstly, I created a pivot table to analyze how many customers accepted the personal loan offered during the last campaign, and what **percentage** they represent within the total customer base.
-
-This helped establish a baseline understanding of overall loan uptake before segmenting by income, education, or other factors.
 
 </details>
 <img width="870" height="183" alt="image" src="https://github.com/user-attachments/assets/bc89f306-5892-4b3a-90f9-e82d3812c9f1" />
 
 <br>
  **Overall acceptance rate** = 9.60%
+ <br>
 - Highly imbalanced data — needs attention in modeling phase
 <br>
 ----
-#### 💰 Income Groups vs Loan Acceptance:
+
+#### Income Groups vs Loan Acceptance:
 Afterward, I created an additional pivot table to analyze and compare which income groups are more or less likely to accept personal loans, and to identify trends between income level and loan acceptance rates.
 
 <img width="965" height="575" alt="image" src="https://github.com/user-attachments/assets/05ad7369-d288-41cd-a5ac-57ea73870f0e" />
 The trends between income level and loan acceptance rate - 
 
-### Key Trends Observed:
+##### Key Trends Observed:
 
 - Customers with **income > \$100K**, especially the **150–199K income group** (with **50% loan acceptance rate**), showed **significantly higher acceptance rates**.
   - This suggests a strong correlation between **income level and willingness or ability to take out loans**.
@@ -173,7 +179,8 @@ The trends between income level and loan acceptance rate -
 
 ------
 #### Education Levels vs Personal Loan Acceptance:
-<img width="663" height="374" alt="image" src="https://github.com/user-attachments/assets/ef01b869-60e7-41d0-8500-1ca824a982d6" /> <br>
+<img width="1167" height="450" alt="image" src="https://github.com/user-attachments/assets/78f25dc2-96a6-47e9-9cb3-ed14a2944dc9" />
+ <br>
 - Loan acceptance increases with education level as education level 3(Advanced/Professional) has the highest acceptance rate with 13.69%, closely followed by Level 2 (Graduate) with 11.52%.
 
 🎯 Key Insight Worth Investigating:
@@ -242,19 +249,26 @@ Insights:<br>
 
 ---
 
-##### Age Group vs Personal Loan Acceptance:
+#### Age Group vs Personal Loan Acceptance:
 
 <img width="389" height="148" alt="image" src="https://github.com/user-attachments/assets/7ef98cce-7d30-4c0c-bb79-02a679c4d76c" />
-<img width="528" height="491" alt="image" src="https://github.com/user-attachments/assets/db1c296a-3495-4059-a7a3-94b6aad17ac1" />....moistalek
-##### Age Group vs Income Group vs Personal Loan Acceptance:
+<img width="527" height="696" alt="image" src="https://github.com/user-attachments/assets/925696a3-ab2c-4b65-b5aa-dde8f84f2eb8" />
 
-##### CCAvg vs Personal Loan Acceptance:
+------
+#### Age Group vs Income Group vs Personal Loan Acceptance:
+
+#### CCAvg vs Personal Loan Acceptance:
+<img width="406" height="129" alt="image" src="https://github.com/user-attachments/assets/0485349b-b80d-4ba7-902e-323876f4ca35" />
+
 - Higher credit card spending correlates with higher loan interest
 - Too low = low financial activity
 - Too high = potential debt risk
+
+----
+
 ##### CD Account + CCAvg + Securities Account vs. Loan Acceptance:
 <img width="1307" height="394" alt="image" src="https://github.com/user-attachments/assets/1bad3cc7-7684-4029-8ded-53bb66128eb7" />
-
+- Big credit spenders may be more comfortable with debt, making them warmer leads. 
 - Customers with both **CD Accounts + High CCAvg** are highly loan-active
 - Multiple financial products signal trust and engagement
 
@@ -262,23 +276,41 @@ Insights:<br>
 ##### Mortgage vs Loan Acceptance:
 <img width="469" height="447" alt="image" src="https://github.com/user-attachments/assets/c4cfe19f-a7c2-4291-8ee0-d13ec8a220b3" />
 
-- Moderate mortgage customers tend to be more open to personal loans
-- Mortgage + Credit Activity = solid targeting vector
-
+-----
 ##### Mortgage vs CCAvg vs Loan Acceptance:
 <img width="794" height="410" alt="image" src="https://github.com/user-attachments/assets/fcc98689-e312-4321-8e17-e4bdda70b3c0" />
+- Moderate mortgage customers tend to be more open to personal loans
+- Mortgage + Credit Activity = solid targeting vector
+----
 
+### Correlation Analysis 
+Following the exploratory analysis, we computed correlation coefficients to quantitatively assess which variables are most predictive of loan acceptance. Income and credit card spending emerged as the strongest indicators, guiding the creation of our predictive scorecard.
+
+###  Scorecard Model 
+
+
+Visual Dashboard or Summary Sheet
 
 ### 💼 Final Thoughts & Business Initiatives:
+📌 Insights
+9.6% of total customers accepted the loan.
+Income, education, CD accounts, and CCAvg are strongest predictors.
+Top 20% income group has >25% acceptance rate.
+Customers with CD + high income + high credit card usage are goldmine targets.
 
-- 🎯 Focus marketing efforts on:
-  - Income > \$100K
+-  Focus marketing efforts on:
+  - Income > \$100K, ideally $100-$199K
   - Education level 2 or 3 (Graduate/Professional)
   - Age 31–60
   - Online banking users with multiple financial products
-- 🚫 Avoid targeting:
-  - Undergrads with low income or young age
+-  Avoid targeting:
+  - Undergrads with low income (<70K) or young age 
   - Inactive credit users
+
+
+
+
+
 
 ## ✅ Strategic Recommendations
 
