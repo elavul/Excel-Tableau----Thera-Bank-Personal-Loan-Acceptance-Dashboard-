@@ -92,8 +92,12 @@ The dataset contains information about customers and their financial behavior. T
 
 - A Certificate of Deposit is a type of savings account offered by banks that offers a higher interest rate in exchange for the customer agreeing to keep the money deposited for a fixed period, such as 6 months, 1 year, 5 years, etc.
 
-I also added additional columns, helper columns, where  when I considered some variables need to be bined to offer a more straightforward analysis.
+I also added **additional helper columns** to the dataset, particularly where certain variables needed to be **binned or grouped** to support a more straightforward and meaningful analysis.
 
+This allowed for:
+- Cleaner segmentation (e.g., income ranges, age brackets)
+- Easier trend identification across categorical variables
+- Improved clarity in pivot tables and visualizations
 
 </details>
 
@@ -108,97 +112,135 @@ I also added additional columns, helper columns, where  when I considered some v
 - Conducted **exploratory analysis** with pivot tables in Excel
 - Focused on **loan response rate** across different customer attributes
 - Identified patterns in **income**, **education**, **online banking**, and **credit card usage**
-
-
-
+----
 
 ### 🎯 Key Insights:
 
-#### ✅ Loan Acceptance Rate:
+#### ✅ Initial Pivot Table: Loan Acceptance Overview
 
-Firstly, I created a pivot table to see how many customers accepted the loan offered in the last campaign, and what % they represent: 
+Firstly, I created a pivot table to analyze how many customers accepted the personal loan offered during the last campaign, and what **percentage** they represent within the total customer base.
+
+This helped establish a baseline understanding of overall loan uptake before segmenting by income, education, or other factors.
+
+</details>
 <img width="870" height="183" alt="image" src="https://github.com/user-attachments/assets/bc89f306-5892-4b3a-90f9-e82d3812c9f1" />
 
 <br>
  **Overall acceptance rate** = 9.60%
 - Highly imbalanced data — needs attention in modeling phase
 <br>
-
+----
 #### 💰 Income Groups vs Loan Acceptance:
-After, I created an additional pivot table to analyse and compare which income groups are more or less likely to accept personal loans, and if there are any trends between income level and loan acceptance rates.
+Afterward, I created an additional pivot table to analyze and compare which income groups are more or less likely to accept personal loans, and to identify trends between income level and loan acceptance rates.
 
 <img width="965" height="575" alt="image" src="https://github.com/user-attachments/assets/05ad7369-d288-41cd-a5ac-57ea73870f0e" />
-The trends between income level and loan acceptance rate - This might suggest that loan acceptance increases with income - possibly due to better creditworthiness or greater borrowing confidence.
+The trends between income level and loan acceptance rate - 
 
-- Customers with **income > \$100K** showed significantly higher acceptance
-- Income group **150–199K** had a **50% acceptance rate**
-- High-income customers are prime targets
+### Key Trends Observed:
+
+- Customers with **income > \$100K**, especially the **150–199K income group** (with **50% loan acceptance rate**), showed **significantly higher acceptance rates**.
+  - This suggests a strong correlation between **income level and willingness or ability to take out loans**.
+  - Potential drivers: **greater creditworthiness**, **financial confidence**, or **eligibility**.
+
+- On the other hand, customers in **lower income groups** show **very low or no loan acceptance**.
+  - This may be due to **lack of eligibility**, **limited need**, or **financial constraints**.
+
+..............
 
 <details>
-#### In=depth analysis:
-In Income Group 100–149:
+<summary>In-depth Analysis:</summary>
 
-Only 11% of customers rejected the loan.
+#### 🔹 Income Group: 100–149K
+- Only **11%** of customers rejected the loan.
+- **4.38%** accepted — a much higher acceptance rate compared to lower income brackets.
+- This group represents **15.38%** of the total customer base.
 
-But 4.38% accepted — much higher acceptance rate compared to lower income brackets.
+#### 🔹 Income Group: 150–199K
+- Equal percentages of customers **accepted and rejected** the loan (**4.34%** each).
+- This implies a **50% acceptance rate**, which is **very high** relative to other groups.
 
-They make up 15.38% of the total customer base.
+#### 🔹 Middle-Income Group: 70–99K
+- This group is starting to show interest in loans:
+  - **0.74% acceptance** vs **21% rejection**.
+- While still low in absolute terms, it’s a **significant improvement** over lower-income brackets.
 
-Income Group 150–199:
+#### 🔹 High-Income Group: >200K
+- Very few customers in this group (**only 19 total**), making up just **0.38%** of the customer base.
+- Despite high income, **loan uptake is minimal**.
+  - Possible reasons: these customers may **not need personal loans**, or it may be a **small, niche segment**.
 
-Equal % of people accepted and rejected the loan (4.34% each).
+</details>
 
-That means 50% acceptance rate — very high!
-
-✅ Insight: Loan acceptance rate increases significantly with income, especially starting from 100+ income brackets.
-Insight: Lower-income customers are not accepting personal loans at all. Could be due to lack of eligibility, interest, or need.
-
-3. Middle-Income Group 70–99 Shows Growing Acceptance
-This group is starting to show some interest:
-
-0.74% acceptance vs 21% rejection.
-
-Not very high in % terms but significantly better than lower brackets.
-4. High Acceptance in High-Income, but Small Numbers
-Group >200 has high income but very few people (only 19 total).
-
-Very small share of customer base (0.38%).
-
-✅ Insight: These customers might not need loans often, or it’s a small niche.
-✅ Insight: This income group could be a growing target segment for personal loans.
-
-
-
-
+------
 #### Education Levels vs Personal Loan Acceptance:
 <img width="663" height="374" alt="image" src="https://github.com/user-attachments/assets/ef01b869-60e7-41d0-8500-1ca824a982d6" /> <br>
-Education Level 3(Advanced/Professional) has the Highest Acceptance Rate, closely folowed by Level 2 (Graduate)
-🎯 Objective:
-The goal of this table is to analyze how education level correlates with acceptance of a personal loan offer.
+- Loan acceptance increases with education level as education level 3(Advanced/Professional) has the highest acceptance rate with 13.69%, closely followed by Level 2 (Graduate) with 11.52%.
+
+🎯 Key Insight Worth Investigating:
+
+- Customers with **only an Undergraduate degree** make up a significant portion of the overall customer base — **40.06% (2,003 out of 5,000)**.
+- However, only **4.71% (93)** of them accepted a loan during the last campaign.
+
+> This stark contrast suggests a potential barrier to loan adoption among undergraduates — possibly due to **lower income**, **credit constraints**, or **limited financial literacy**.
+
+- It would be valuable to investigate:
+  - Whether **high-income undergraduates** with strong digital and financial understanding are still avoiding loans.
+  - If **younger undergraduates** are more open to taking out loans compared to older ones.
+
 
 #### Education Levels + Online Banking vs Personal Loan Acceptance
 
 <img width="1064" height="435" alt="image" src="https://github.com/user-attachments/assets/722fc81f-696e-4c57-bfbf-226822abe147" />
 
+🎯 Observation:
+- A similar trend is observed here: while customers with **only an Undergraduate degree** make up the **largest group**, they also show the **lowest loan acceptance rate**.
+- Next, we’ll explore this trend in more detail to understand the underlying drivers.
 
-Insights:
- Online banking users with Graduate degrees and Advanced Degrees have high acceptance rates (14.07%, respectively 13.69%). It looks like digital tools only really help people respond better when they already have a good understanding of finances. 
-Lowest acceptance, but also largest group: Online users with only Undergrad (4.06%). Possibly due to lower income, lower credit scores. Interesting to investigate if undergrads with high income are still not accepting loans, or if younger undergrands are more willing to take out a loan than older ones.
 
+#### 🧑‍🎓 Undergrad + Income + Age Insights:
 
-### . Undergraduates:
-While your overall data shows undergrads as poor targets, adding income, age, and tenure reveals that some subgroups of undergrads are actually strong prospects. Let's dive deeper and investigate :
-
+While the overall data shows undergrads as poor targets, adding income, age, and tenure reveals that some subgroups of undergrads are actually strong prospects. Let's dive deeper and investigate and explore if there is a corelation between the family size, education and loan acceptance:
 <img width="1049" height="752" alt="image" src="https://github.com/user-attachments/assets/3d891fdf-96db-448c-8df1-636d7323e7ed" />
+
+📌 Insights:
+
+**Loan acceptance is strongly correlated with income above $100K**, particularly for customers aged **31–60**.
+   - When targeting customers with **Undergraduate degrees**, focus only on those earning **over $100K** and falling within the **31–60 age range**.
+   - **Family sizes of 3–4 members** are most common among loan accepters in this segment.
+
+🎯 To validate this pattern across educational backgrounds, apply a filter for customers with **Level 2 (Graduate degrees)** and assess whether the same trend holds, especially within the same income and age brackets.
+
 <br>
-Targeting strategy for customers with just undergraduates:
- 
- 2. <img width="467" height="292" alt="image" src="https://github.com/user-attachments/assets/65a38716-1104-49ce-b00a-4ab76f3cbe26" />
- 3. <img width="800" height="544" alt="image" src="https://github.com/user-attachments/assets/9022f42b-b7a4-404e-8d30-68423cb481f8" />
+<img width="467" height="292" alt="image" src="https://github.com/user-attachments/assets/65a38716-1104-49ce-b00a-4ab76f3cbe26" />
 <br>
-Marketing :
-1. Loan Acceptance is Strongly Linked to Income Above 100K - only target undergrads if income > $100K and in the age range 31-60 years old
-2. with 3-4 members
+<img width="800" height="544" alt="image" src="https://github.com/user-attachments/assets/9022f42b-b7a4-404e-8d30-68423cb481f8" />
+<br>
+Insights:<br>
+
+- Previous data indicates that customers with a **Graduate degree** have a **loan acceptance rate of 11.52%**.
+
+- The current table reinforces earlier insights:
+  - The **majority of loans** are taken by customers with **high incomes ($100K–199K)**.
+  - These customers are primarily aged **31–60**, highlighting mid-career individuals.
+
+- Within this high-income, 31–60 age group:
+  - **Loan acceptance is fairly evenly spread across family sizes**.
+  - There is a **slight skew toward larger families**, especially in the 100–149K bracket.
+
+- However, as **income increases within the 100–199K range**, a trend emerges:
+  - **Family Size 2 becomes increasingly dominant**, suggesting that smaller, higher-income households may be more confident or capable in managing personal loans.
+
+
+<details><summary> More insights: </summary>
+
+🔹Income Groups 100–149K and 150–199K account for 167 out of 182 total loan acceptances — over 91.7% of all accepted loans.<br>
+🔹Family Size of 2 is Overrepresented in Loan Acceptance: <br>
+🔹🔹Family Size 4: 48 accepted loans (26.4%)<br><br>
+🔹🔹Family Size 3: 44 accepted loans (24.2%)<br>
+🔹🔹Family Size 2: 50 accepted loans (27.5%)<br>
+</details>
+
+---
 
 ##### Age Group vs Personal Loan Acceptance:
 
@@ -207,25 +249,36 @@ Marketing :
 ##### Age Group vs Income Group vs Personal Loan Acceptance:
 
 ##### CCAvg vs Personal Loan Acceptance:
-###### Low Credit Card Balance:
-- Better for avoiding debt and maintaining a low credit utilization ratio.
-- Helps improve or maintain a healthy credit score.
-- Too low a balance may result in missed rewards or lack of credit activity.
-###### High Credit Card Balance:
-- Can lead to high-interest charges and lower credit score.
-- Increases risk of accumulating debt.
-- Should be avoided if not manageable.
-
+- Higher credit card spending correlates with higher loan interest
+- Too low = low financial activity
+- Too high = potential debt risk
 ##### CD Account + CCAvg + Securities Account vs. Loan Acceptance:
 <img width="1307" height="394" alt="image" src="https://github.com/user-attachments/assets/1bad3cc7-7684-4029-8ded-53bb66128eb7" />
 
+- Customers with both **CD Accounts + High CCAvg** are highly loan-active
+- Multiple financial products signal trust and engagement
+
+---
 ##### Mortgage vs Loan Acceptance:
 <img width="469" height="447" alt="image" src="https://github.com/user-attachments/assets/c4cfe19f-a7c2-4291-8ee0-d13ec8a220b3" />
+
+- Moderate mortgage customers tend to be more open to personal loans
+- Mortgage + Credit Activity = solid targeting vector
 
 ##### Mortgage vs CCAvg vs Loan Acceptance:
 <img width="794" height="410" alt="image" src="https://github.com/user-attachments/assets/fcc98689-e312-4321-8e17-e4bdda70b3c0" />
 
 
+### 💼 Final Thoughts & Business Initiatives:
+
+- 🎯 Focus marketing efforts on:
+  - Income > \$100K
+  - Education level 2 or 3 (Graduate/Professional)
+  - Age 31–60
+  - Online banking users with multiple financial products
+- 🚫 Avoid targeting:
+  - Undergrads with low income or young age
+  - Inactive credit users
 
 ## ✅ Strategic Recommendations
 
