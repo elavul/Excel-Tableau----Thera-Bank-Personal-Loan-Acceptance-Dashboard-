@@ -5,10 +5,11 @@
 ![Tableau](https://img.shields.io/badge/-Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
 ![Excel](https://img.shields.io/badge/-Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
 
-Thera Bank is aiming to grow its base of *asset customers* (i.e., borrowers) since most of its current customers are *liability customers* (depositors). The bank earns more through interest on loans, so it wants to convert depositors into personal loan takers. A previous marketing campaign had a 9% conversion rate, which has encouraged further targeted efforts to increase loan adoption with minimal costs.
- 
-This case is about a bank (Thera Bank) whose management wants to explore ways of converting its liability customers to personal loan customers (while retaining them as depositors). A campaign that the bank ran last year for liability customers showed a healthy conversion rate of over 9% success. This has encouraged the retail marketing department to devise campaigns with better target marketing to increase the success ratio with minimal budget.
+Thera Bank, with a large depositor base, aims to grow its loan portfolio by converting liability customers into asset (loan) customers. A prior campaign achieved a 9% conversion rate, prompting the need for more refined targeting to improve results while reducing costs. 
 
+This project uses data analysis and visualisation to explore customer behavior and identify patterns among those who accepted a personal loan in a previous campaign. It delivers strategic insights and a dashboard that highlights actionable segments for future marketing efforts.
+
+---
 
 ### 📚 Table of Contents
 ## 1. Business Objective
@@ -32,103 +33,82 @@ This case is about a bank (Thera Bank) whose management wants to explore ways of
 
 ### 🎯 Aims of the Project:
 
-In this project I acted as the data analyst for the Thera Bank company. My goal was to:
-- Help the bank identify which customers are more likely to accept a personal loan.
-- Help the bank identify high-probability customers, minimizing marketing costs and maximizing loan uptake.
-* Use this to make marketing more targeted and cost-effective.
-* 
-* Objective: Build a classification model to predict which liability customers are most likely to accept a personal loan, enabling Thera Bank to run cost-effective, targeted marketing campaigns.
-
- Show how a company is growing (or struggling) with its recurring revenue, churn, and customer retention, using clean visuals and actionable insights.
-Help the bank identify which customers are more likely to accept a personal loan.
-
-Use this to make marketing more targeted and cost-effective
+In this project I acted as the data analyst for the Thera Bank. My goal was to:
+- Identify customers with the **highest probability** of accepting personal loan offers.
+- Optimize future marketing campaigns through **segmentation and data-driven targeting**.
+- Build clear, visual dashboards for communicating key metrics and campaign performance.
+- Provide actionable insights to improve customer conversion and **marketing ROI**.
 
 ---
 
 #### **Business Goal:**
 
-* Build a **predictive model** to identify which liability customers are most likely to accept a **personal loan**.
-* This model will help improve the **success rate of marketing campaigns** while **reducing overall costs**.
+- Build a **predictive profile** of potential loan customers using existing campaign data.
+- Reduce unnecessary marketing spend by focusing on **high-value, high-probability leads**.
+- Improve **campaign success rate** using segmented strategies.
 
-The main goal of this dataset is to:
+- Improve marketing ROI by targeting high-probability customers.
+- Avoid wasting budget on uninterested or unqualified customers.
+- Use insights to build a reliable, scalable classification model.
 
-Predict which customers are likely to accept a personal loan offer.
 
-Help the bank target the right customers in future marketing campaigns, to save money and increase success rates.
-
-This is a classification problem because the target variable (whether a customer accepted a personal loan) is binary (0 = No, 1 = Yes).
----
+This is a **binary classification problem**:  
+> **Target Variable**: `Personal Loan` → (1 = Accepted, 0 = Declined)
 
 
 
 ### 🚀 Tools used:
-Data wrangling	Excel  (or Python/Pandas if you're comfortable) <br>
-Dashboard building	Tableau Public (best choice for visual + interactivity)   <br>
-Data cleaning (optional advanced)	Python, Jupyter Notebook  <br>
-Tableau -  Final interactive dashboard with KPIs 
-
-
+| Task                         | Tool Used                     |
+|------------------------------|-------------------------------|
+| Data Cleaning & EDA         | Excel                         |
+| Dashboard & Visualization   | Tableau Public                |
+| Data Source                 | [Kaggle Dataset](https://www.kaggle.com/datasets/itsmesunil/bank-loan-modelling/data) |
 
 ---
 
 #### ### 🗂️ Introducing the Dataset:
-📦 Dataset:
-Imported from Kaggle.com: https://www.kaggle.com/datasets/itsmesunil/bank-loan-modelling/data
-
 The dataset contains demographic and financial attributes of 5,000 Thera Bank customers. The goal is to identify patterns among those who accepted a personal loan during a previous campaign
 
 The dataset contains information about customers and their financial behavior. The main **target variable** is:
 
 * **Personal Loan**: Whether the customer accepted the loan offer during the last campaign (1 = Yes, 0 = No)
 
-<details><summary>#### **Features (Columns):**
+<details><summary>#### **Features (Columns):**</summary>
 
-| Column                 | Description                                                     |
-| ---------------------- | --------------------------------------------------------------- |
-| **ID**                 | Unique customer ID                                              |
-| **Age**                | Age in years                                                    |
-| **Experience**         | Years of professional experience                                |
-| **Income**             | Annual income (\$000)                                           |
-| **ZIPCode**            | Customer’s residential ZIP code                                 |
-| **Family**             | Family size                                                     |
-| **CCAvg**              | Avg. monthly credit card spending (\$000)                       |
-| **Education**          | Education level (1 = Undergrad, 2 = Graduate, 3 = Professional) |
-| **Mortgage**           | Value of house mortgage if any (\$000)                          |
-| **Personal Loan**      | Did this customer accept the personal loan offered in the last campaign?|
-| **Securities Account** | Does the customer have a securities account with the bank? (0/1)|
-| **CD Account**         | Does the customer have a Certificate of Deposit account? (0/1)  |
-| **Online**             | Uses internet banking? (0/1)                                    |
-| **CreditCard**         | Does the customer use a credit card issued by UniversalBank? (0/1)|
+| Feature            | Description                                              |
+|--------------------|----------------------------------------------------------|
+| Age                | Customer's age                                           |
+| Experience         | Years of professional experience                         |
+| Income             | Annual income (\$000)                                    |
+| ZIP Code           | Residential location                                     |
+| Family             | Family size                                              |
+| CCAvg              | Avg. monthly credit card spending (\$000)                |
+| Education          | 1 = Undergrad, 2 = Graduate, 3 = Professional            |
+| Mortgage           | House mortgage value (\$000)                             |
+| Personal Loan      | **Target Variable** – Accepted loan (1 = Yes, 0 = No)    |
+| Securities Account | Has securities account (0/1)                             |
+| CD Account         | Has Certificate of Deposit account (0/1)                 |
+| Online             | Uses internet banking (0/1)                              |
+| CreditCard         | Has a bank-issued credit card (0/1)                      |
 
+I also added additional columns when I considered some variables need to be bined to offer a more straightforward analysis.
 A Certificate of Deposit is a type of savings account offered by banks that offers a higher interest rate in exchange for the customer agreeing to keep the money deposited for a fixed period, such as 6 months, 1 year, 5 years, etc.
 
-</summary></details>
+</details>
 
  <img width="1293" height="799" alt="Screenshot 2025-08-10 223810" src="https://github.com/user-attachments/assets/af290b4e-3024-4eb4-a409-d03060ba80dc" />
 
 ---
-
-#### **Inspiration & Use Case:**
-
-* **Exploratory Analysis**: Understand how various features like income, credit card usage, or education level affect loan adoption.
-
-* **Business Impact**: More efficient and cost-effective targeting in future campaigns.
-
-Would you like help exploring the data or building the predictive model next?
-
 ### 🧹 Pre-Analysis Steps:
-🎯 Methods I Used for Analysis:   </strong> </summary> 
 
-- Exploratory Data Analysis & cleaning??? (EDA): Investigated data structure, table relationships, and schema to understand the database.
+- Performed **initial data profiling** to assess column types, nulls, and distributions
+- Conducted **exploratory analysis** with pivot tables in Excel
+- Focused on **loan response rate** across different customer attributes
+- Identified patterns in **income**, **education**, **online banking**, and **credit card usage**
+
 - <img width="1778" height="306" alt="image" src="https://github.com/user-attachments/assets/24734d74-5ddd-4929-9c40-280d87009515" />
 
-- Create a Pivot table to analyse how many people - This tells you how many customers accepted the loan, and what % they represent.
-Understand the distribution of the target variable:
 
-How many customers accepted the loan vs. how many did not?
-
-What’s the percentage of loan takers?
 
 
  ### We start by performing EDA: We are going to study and combine some variabels to uncover high-value customer segments
@@ -141,8 +121,16 @@ The overall acceptance rate: 9.60%
 Personal Loan Acceptance by Income Group.
 <img width="965" height="575" alt="image" src="https://github.com/user-attachments/assets/05ad7369-d288-41cd-a5ac-57ea73870f0e" />
 The trends between income level and loan acceptance rate - This might suggest that loan acceptance increases with income - possibly due to better creditworthiness or greater borrowing confidence.
+
+----- Create a Pivot table to analyse how many people - This tells you how many customers accepted the loan, and what % they represent.
+Understand the distribution of the target variable:
+
+How many customers accepted the loan vs. how many did not?
+
+What’s the percentage of loan takers?
  
-##### Insights:
+## 📊 Key Analysis & Insights
+### 🎯 1. Loan Acceptance Rate
 ##### 1.High-Income Groups Are More Likely to Accept Loans
 In Income Group 100–149:
 
@@ -230,3 +218,14 @@ Marketing :
 <img width="794" height="410" alt="image" src="https://github.com/user-attachments/assets/fcc98689-e312-4321-8e17-e4bdda70b3c0" />
 
 
+
+## ✅ Strategic Recommendations
+
+| Action                              | Rationale                                       |
+|-------------------------------------|-------------------------------------------------|
+| Target income > \$100K              | Highest acceptance across all segments          |
+| Focus on graduates & professionals  | Education is a strong predictor                 |
+| Use digital channels (email, online)| Best ROI with educated + online banking users   |
+| Segment undergrads by income/age    | Avoid broad targeting—focus on qualified leads  |
+
+---
