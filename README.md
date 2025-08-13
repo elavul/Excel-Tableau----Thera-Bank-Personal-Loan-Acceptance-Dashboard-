@@ -5,17 +5,18 @@
 ![Tableau](https://img.shields.io/badge/-Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
 ![Excel](https://img.shields.io/badge/-Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
 
-Thera Bank, with a large depositor base, aims to grow its loan portfolio by converting liability customers into asset (loan) customers. A prior campaign achieved a 9% conversion rate, prompting the need for more refined targeting to improve results while reducing costs. 
-
-This project uses data analysis and visualisation to explore customer behavior and identify patterns among those who accepted a personal loan in a previous campaign. It delivers strategic insights and a dashboard that highlights actionable segments for future marketing efforts.
+Thera Bank, with a large depositor base, aims to grow its loan portfolio by converting liability customers into asset (loan) customers. A prior campaign achieved a 9% conversion rate, prompting the need for more refined targeting to improve results while reducing costs. This project uses data analysis and visualisation to explore customer behavior and identify patterns among those who accepted a personal loan in a this previous campaign. 
 
 ---
- [🎯 Aims of the Project](#-aims-of-the-project) <br>
+### Table of Contents:
+ [ Aims of the Project](#-aims-of-the-project) <br>
  [Business Goal](#-business-goal) <br>
-  [🚀 Tools used](#-tools-used) <br>
- [🗂️ Introducing the Dataset](#️-introducing-the-dataset)   <br>
- [🧹 Pre-Analysis Steps](#-pre-analysis-steps)   <br>
- [🎯 Key Insights](#-key-insights) <br>   
+  [Tools used](#-tools-used) <br>
+ [Introducing the Dataset](#️-introducing-the-dataset)   <br>
+ [Pre-Analysis Steps](#-pre-analysis-steps)   <br>
+ [What Influences Decisions? Ranking Variables by Correlation](#-what-influences-decisions-?-ranking variables-by-correlation) <br>   
+ Exploratory Data Analysis (EDA)
+  [Exploratory Data Analysis (EDA)](#-exploratory-data--analysis-(eda)) <br>
  [💼 Final thoughts & business initiatives](#-final-thoughts--business-initiatives) <br>
  [⚠️ Challenges & Limitations](#-challenges--limitations) <br>
  [🚀 What is Next](#-what-is-next)
@@ -24,7 +25,7 @@ This project uses data analysis and visualisation to explore customer behavior a
 <summary><strong>📌 </strong></summary></details>
 
 
-### 🎯 Aims of the Project:
+### Aims of the Project:
 
 In this project I acted as the data analyst for the Thera Bank. My goal was to:
 - Identify customers with the **highest probability** of accepting personal loan offers.
@@ -34,7 +35,7 @@ In this project I acted as the data analyst for the Thera Bank. My goal was to:
 
 ---
 
-#### **Business Goal:**
+### Business Goal:
 
 - Build a **predictive profile** of potential loan customers using existing campaign data.
 - Reduce unnecessary marketing spend by focusing on **high-value, high-probability leads**.
@@ -48,18 +49,18 @@ In this project I acted as the data analyst for the Thera Bank. My goal was to:
 This is a **binary classification problem**:  
 > **Target Variable**: `Personal Loan` → (1 = Accepted, 0 = Declined)
 
+--------------
 
-
-### 🚀 Tools used:
+### Tools used:
 | Task                         | Tool Used                     |
 |------------------------------|-------------------------------|
 | Data Cleaning & EDA         | Excel                         |
 | Dashboard & Visualization   | Tableau Public                |
 | Data Source                 | [Kaggle Dataset](https://www.kaggle.com/datasets/itsmesunil/bank-loan-modelling/data) |
 
+--------------------
 
-
-### 🗂️ Introducing the Dataset:
+### Introducing the Dataset:
 The dataset contains demographic and financial attributes of 5,000 Thera Bank customers. The goal is to identify patterns among those who accepted a personal loan during a previous campaign
 
 The dataset contains information about customers and their financial behavior. The main **target variable** is:
@@ -90,30 +91,28 @@ The dataset contains information about customers and their financial behavior. T
 
  <img width="1293" height="799" alt="Screenshot 2025-08-10 223810" src="https://github.com/user-attachments/assets/af290b4e-3024-4eb4-a409-d03060ba80dc" />
 
-### 🧹 Pre-Analysis Steps:
+---
+
+### Pre-Analysis Steps:
 
 - Performed **initial data profiling** to assess column types, nulls, and distributions
 - Final cleaned dataset:
-- <img width="1778" height="306" alt="image" src="https://github.com/user-attachments/assets/24734d74-5ddd-4929-9c40-280d87009515" />
+  <img width="1778" height="306" alt="image" src="https://github.com/user-attachments/assets/24734d74-5ddd-4929-9c40-280d87009515" />
 
+<details><summary>additional helper columns</summary>
 I also added **additional helper columns** to the dataset, particularly where certain variables needed to be **binned or grouped** to support a more straightforward and meaningful analysis.
 
-This allowed for:
+This allowed for: 
 - Cleaner segmentation (e.g., income ranges, age brackets)
 - Easier trend identification across categorical variables
 - Improved clarity in pivot tables and visualizations
+
+</details>
+
 ----
-### 🧭 Variable Prioritization Strategy (Based on Correlation)
-- Focused on **loan response rate** across different customer attributes
-- Identified patterns in **income**, **education**, **online banking**, and **credit card usage**
-- 
+### What Influences Decisions? Ranking Variables by Correlation 
+ 
 Before diving into pivot tables and EDA, I used a correlation matrix to quickly identify which features had a meaningful relationship with our target: Loan Acceptance.
-
-This helped me:
-
-- Focus efforts on top predictors like **Annual Income**, **CCAvg**, and **CD Account**
-- Ignore low-signal variables like **Age** and **Family Size**
-- Avoid multicollinearity by choosing between strongly linked variables like **Income vs. CCAvg**
 
 <img width="977" height="679" alt="image" src="https://github.com/user-attachments/assets/c788cb24-103c-488a-8606-91fcfee3a3f1" />
 <img width="974" height="217" alt="image" src="https://github.com/user-attachments/assets/ed785391-4d35-4fc4-995b-c0e8a5df3a3b" />
@@ -122,6 +121,9 @@ This helped me:
 ---
 
 ##  Exploratory Data Analysis (EDA)
+This helped me to:
+- Focused on **loan response rates** across different customer attributes
+- Identify patterns in **income**, **education**, **online banking**, and **credit card usage**
 ---
 #### Initial Pivot Table: Loan Acceptance Overview
 
@@ -131,12 +133,12 @@ Firstly, I created a pivot table to analyze how many customers accepted the pers
 <img width="870" height="183" alt="image" src="https://github.com/user-attachments/assets/bc89f306-5892-4b3a-90f9-e82d3812c9f1" />
 
 <br>
- **Overall acceptance rate** = 9.60%
- <br>
-- Highly imbalanced data — needs attention in modeling phase
-<br>
 
-----
+ - Overall loan acceptance rate = **9.60%**
+  
+ - The dataset is highly imbalanced, indicating the need for **further segmentation analysis**.
+
+-------
 
 #### Income Groups vs Loan Acceptance:
 Afterward, I created an additional pivot table to analyze and compare which income groups are more or less likely to accept personal loans, and to identify trends between income level and loan acceptance rates.
@@ -153,7 +155,6 @@ The trends between income level and loan acceptance rate -
 - On the other hand, customers in **lower income groups** show **very low or no loan acceptance**.
   - This may be due to **lack of eligibility**, **limited need**, or **financial constraints**.
 
-..............
 
 <details>
 <summary>In-depth Analysis:</summary>
@@ -179,23 +180,23 @@ The trends between income level and loan acceptance rate -
 
 </details>
 
-------
+--------
+
 #### Education Levels vs Personal Loan Acceptance:
 <img width="1167" height="450" alt="image" src="https://github.com/user-attachments/assets/78f25dc2-96a6-47e9-9cb3-ed14a2944dc9" />
  <br>
-- Loan acceptance increases with education level as education level 3(Advanced/Professional) has the highest acceptance rate with 13.69%, closely followed by Level 2 (Graduate) with 11.52%.
+Loan acceptance increases with education level as education level 3(Advanced/Professional) has the highest acceptance rate with 13.69%, closely followed by Level 2 (Graduate) with 11.52%.
 
-🎯 Key Insight Worth Investigating:
+##### Key Insights Worth Investigating:
 
-- Customers with **only an Undergraduate degree** make up a significant portion of the overall customer base — **40.06% (2,003 out of 5,000)**.
-- However, only **4.71% (93)** of them accepted a loan during the last campaign.
-
-> This stark contrast suggests a potential barrier to loan adoption among undergraduates — possibly due to **lower income**, **credit constraints**, or **limited financial literacy**.
-
-- It would be valuable to investigate:
-  - Whether **high-income undergraduates** with strong digital and financial understanding are still avoiding loans.
+- Customers with **only an Undergraduate degree** make up a significant portion of the overall customer base — **40.06% (2,003 out of 5,000)**.  <br>
+- However, only **4.71% (93)** of them accepted a loan during the last campaign.  <br>
+- This stark contrast suggests a potential barrier to loan adoption among undergraduates — possibly due to **lower income**, **credit constraints**, or **limited financial literacy**.   <br>
+- It would be valuable to investigate:   
+  - Whether **high-income undergraduates** with strong digital and financial understanding are still avoiding loans. 
   - If **younger undergraduates** are more open to taking out loans compared to older ones.
 
+-----
 
 #### Education Levels + Online Banking vs Personal Loan Acceptance
 
@@ -205,26 +206,30 @@ The trends between income level and loan acceptance rate -
 - A similar trend is observed here: while customers with **only an Undergraduate degree** make up the **largest group**, they also show the **lowest loan acceptance rate**.
 - Next, we’ll explore this trend in more detail to understand the underlying drivers.
 
+----------------
 
 #### 🧑‍🎓 Undergrad + Income + Age Insights:
 
 While the overall data shows undergrads as poor targets, adding income, age, and tenure reveals that some subgroups of undergrads are actually strong prospects. Let's dive deeper and investigate and explore if there is a corelation between the family size, education and loan acceptance:
 <img width="1049" height="752" alt="image" src="https://github.com/user-attachments/assets/3d891fdf-96db-448c-8df1-636d7323e7ed" />
 
-📌 Insights:
+##### Key Trends Observed:
 
 **Loan acceptance is strongly correlated with income above $100K**, particularly for customers aged **31–60**.
    - When targeting customers with **Undergraduate degrees**, focus only on those earning **over $100K** and falling within the **31–60 age range**.
    - **Family sizes of 3–4 members** are most common among loan accepters in this segment.
 
-🎯 To validate this pattern across educational backgrounds, apply a filter for customers with **Level 2 (Graduate degrees)** and assess whether the same trend holds, especially within the same income and age brackets.
+--------
+
+🎯 To validate the pattern across different educational backgrounds, I filtered for customers with Level 2 (Graduate degrees) to see if the trend held true, particularly within similar income and age groups.
 
 <br>
 <img width="467" height="292" alt="image" src="https://github.com/user-attachments/assets/65a38716-1104-49ce-b00a-4ab76f3cbe26" />
 <br>
 <img width="800" height="544" alt="image" src="https://github.com/user-attachments/assets/9022f42b-b7a4-404e-8d30-68423cb481f8" />
 <br>
-Insights:<br>
+
+##### Key Trends Observed:
 
 - Previous data indicates that customers with a **Graduate degree** have a **loan acceptance rate of 11.52%**.
 
