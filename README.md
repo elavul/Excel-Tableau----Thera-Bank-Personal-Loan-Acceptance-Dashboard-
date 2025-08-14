@@ -19,7 +19,7 @@ Thera Bank aims to refine its targeting strategies for personal loan offers to i
    - [Key Insights](#key-insights)
 7. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)  
 <details>
-  <summary>questions explored (EDA)</summary>
+  <summary>Correlation explored </summary>
  
   - [Income Groups vs Loan Acceptance](#income-groups-vs-loan-acceptance)  
   - [Education Levels vs Loan Acceptance](#education-levels-vs-loan-acceptance)  
@@ -32,8 +32,8 @@ Thera Bank aims to refine its targeting strategies for personal loan offers to i
 8. [Scorecard Model](#scorecard-model)  
    - [Predictive Scorecard Approach](#predictive-scorecard-approach)  
    - [Weight Assignments](#weight-assignments)  
-9. [Visual Dashboard](#visual-dashboard)  
-10. [Final Thoughts & Business Initiatives](#final-thoughts-business-initiatives)  
+9.  [Visual Dashboard](#visual-dashboard)  
+10. [Actionable Recommendations](#actionable-recommendations)  
 11. [Challenges & Limitations](#challenges-limitations)  
 12. [What Is Next](#what-is-next)  
   
@@ -261,6 +261,8 @@ Customers aged 31-60 show higher loan acceptance rates, especially within the $1
 Higher credit card spending correlates with higher loan acceptance, suggesting that customers who are already engaged in financial activity are more willing to take on personal debt. We should target customers who have a high CCAvg and mortgages, as they may be more open to borrowing.
 
 ----
+##### CD Account vs Loan Acceptance:
+<img width="726" height="107" alt="image" src="https://github.com/user-attachments/assets/3bbea8cd-5dbd-44db-aaa1-e8bfa49aea57" />
 
 ##### CD Account + CCAvg + Securities Account vs. Loan Acceptance:
 <img width="1307" height="394" alt="image" src="https://github.com/user-attachments/assets/1bad3cc7-7684-4029-8ded-53bb66128eb7" />
@@ -278,64 +280,44 @@ Big credit spenders tend to be more comfortable with debt, making them warmer le
 - Mortgage + Credit Activity = solid targeting vector
 
 
-----
-
-### Correlation Analysis 
-Following the exploratory analysis, we computed correlation coefficients to quantitatively assess which variables are most predictive of loan acceptance. Income and credit card spending emerged as the strongest indicators, guiding the creation of our predictive scorecard.
-
 --------
 
 ###  Scorecard Model 
-The most obvious next step is to target the customers with the highest scores for loan offers. These are customers who fit your criteria across all the key factors (income, education, spending, and age).
-
-
-Predictive Scorecard Approach:
-"Using the correlation analysis, we can build a simple scorecard by assigning weights to key factors:
-
+SOON
 Income (weight: 40%)
-
-Education level (weight: 30%)
-
-Credit Card Spending (weight: 20%)
-
-Age Group (weight: 10%)
+CCAvg (Credit Card Average spending, weight: 20%)
+CD Account (weight: 15%)
+Education Level (weight: 10%)
+Mortgage Value (weight: 5%)
+Family Size (weight: 2.5%)  OUT OF 5
+Age Group (weight: 5%)
+Online Banking (weight: 2.5%)
 Customers scoring above a certain threshold will be targeted with loan offers in the next campaign."
 
+Total Score Formula = C4*0.025 + G4*0.4 + K4* 0.025 + M4*0.2 + P4*0.1 + S4*0.05 + X4*0.15+Z4*0.025
 
-Visual Dashboard or Summary Sheet
+Scoring Threshold: top 25%
 
-### 💼 Final Thoughts & Business Initiatives:
-📌 Insights
-9.6% of total customers accepted the loan.
-Income, education, CD accounts, and CCAvg are strongest predictors.
-Top 20% income group has >25% acceptance rate.
-Customers with CD + high income + high credit card usage are goldmine targets.
+Score ≥ 60: High-priority targets for loan offers.
 
--  Focus marketing efforts on:
-  - Income > \$100K, ideally $100-$199K
-  - Education level 2 or 3 (Graduate/Professional)
-  - Age 31–60
-  - Online banking users with multiple financial products
--  Avoid targeting:
-  - Undergrads with low income (<70K) or young age 
-  - Inactive credit users
+Score ≥ 40: Medium-priority targets for loan offers.
+
+Score < 40: Low-priority targets (not ideal for loan offers)
 
 
+### Visual Dashboard (Tableau)
+SOON
 
-Actionable Recommendations:
+--------
+### Actionable Recommendations:
 
 Target customers earning >$100K, especially in the $100K–199K range, for the next campaign to maximize conversions.
 Focus marketing on customers aged 31-60 with a graduate or professional education, as this group shows the highest interest in personal loans.
-
 Utilize digital channels to reach customers who have multiple financial products, such as credit cards or mortgages.
-
-
----
-Strategic Business Initiatives
 
 ### Conclusion 
 
-By focusing on high-income, educated customers who are active in financial activities, Thera Bank can significantly increase conversion rates while reducing wasted marketing spend. The insights provided here will help the marketing team target the right audience with the right offer, optimizing both the campaign’s success and ROI."
+By focusing on high-income, educated customers who are active in financial activities, Thera Bank can significantly increase conversion rates while reducing wasted marketing spend. The insights provided here will help the marketing team target the right audience with the right offer, optimizing both the campaign’s success and ROI.
 
 ## What Is Next
 
