@@ -296,7 +296,10 @@ Online Banking (weight: 2.5%)
 
 Customers scoring above a certain threshold will be targeted with loan offers in the next campaign."
 
+
 Total Score Formula = C4*0.025 + G4*0.4 + K4* 0.025 + M4*0.2 + P4*0.1 + S4*0.05 + X4*0.15+Z4*0.025
+
+
 
 Scoring Threshold: top 25%
 
@@ -313,13 +316,9 @@ SOON
 --------
 ### Actionable Recommendations:
 
-Target customers earning >$100K, especially in the $100K–199K range, for the next campaign to maximize conversions.
-Focus marketing on customers aged 31-60 with a graduate or professional education, as this group shows the highest interest in personal loans.
-Utilize digital channels to reach customers who have multiple financial products, such as credit cards or mortgages.
-
-### Conclusion 
-
-By focusing on high-income, educated customers who are active in financial activities, Thera Bank can significantly increase conversion rates while reducing wasted marketing spend. The insights provided here will help the marketing team target the right audience with the right offer, optimizing both the campaign’s success and ROI.
+Target customers earning >$100K, especially in the $100K–199K range, for the next campaign to maximize conversions. <br>
+Focus marketing on customers aged 31-60 with a graduate or professional education, as this group shows the highest interest in personal loans. <br>
+Utilize digital channels to reach customers who have multiple financial products, such as credit cards or mortgages. <br>
 
 ## What Is Next
 
