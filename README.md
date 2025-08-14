@@ -283,15 +283,23 @@ Big credit spenders tend to be more comfortable with debt, making them warmer le
 --------
 
 ###  Scorecard Model 
-SOON
+SOON <br>
 Income (weight: 40%)
+
 CCAvg (Credit Card Average spending, weight: 20%)
+
 CD Account (weight: 15%)
+
 Education Level (weight: 10%)
+
 Mortgage Value (weight: 5%)
+
 Family Size (weight: 2.5%)  OUT OF 5
+
 Age Group (weight: 5%)
+
 Online Banking (weight: 2.5%)
+
 Customers scoring above a certain threshold will be targeted with loan offers in the next campaign."
 
 Total Score Formula = C4*0.025 + G4*0.4 + K4* 0.025 + M4*0.2 + P4*0.1 + S4*0.05 + X4*0.15+Z4*0.025
