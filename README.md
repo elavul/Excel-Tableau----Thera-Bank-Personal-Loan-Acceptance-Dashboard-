@@ -5,7 +5,7 @@
 ![Tableau](https://img.shields.io/badge/-Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
 ![Excel](https://img.shields.io/badge/-Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
 
-Thera Bank aims to refine its targeting strategies for personal loan offers to improve conversion rates and reduce marketing spend. This project leverages customer profiling to identify high-value segments, using customer data from a previous campaign where only 9% of customers accepted the loan offer. The objective is to create an actionable plan that increases future loan acceptance rates by targeting the most promising customers based on income, education, family size, and credit behaviors.
+Thera Bank aims to refine its targeting strategies for personal loan offers to improve conversion rates and reduce marketing spend. This project leverages customer profiling to identify high-value segments, using customer data from a previous campaign where only 9% of customers accepted the loan offer. The objective is to create an actionable plan that increases future loan acceptance rates by targeting the most promising customers based on income, education, family size, and credit behaviours.
 
 ---
 # Table of Contents
