@@ -10,6 +10,40 @@ Thera Bank aims to refine its targeting strategies for personal loan offers to i
 ---
 # Table of Contents
 
+# Table of Contents
+
+1. [Aims of the Project](#aims-of-the-project)  
+2. [Business Problem](#business-problem)  
+3. [Tools Used](#tools-used)  
+4. [Introducing the Dataset](#introducing-the-dataset)  
+5. [Data Cleaning & Preprocessing](#data-cleaning-preprocessing)  
+6. [What Influences Decisions? Ranking Variables by Correlation](#what-influences-decisions-ranking-variables-by-correlation)  
+   - [Correlation Matrix](#correlation-matrix)  
+   - [Key Insights](#key-insights)
+  
+7. <details>
+   <summary>Exploratory Data Analysis (EDA)</summary>
+   
+   - [Income Groups vs Loan Acceptance](#income-groups-vs-loan-acceptance)  
+   - [Education Levels vs Loan Acceptance](#education-levels-vs-loan-acceptance)  
+   - [Education + Online Banking vs Loan Acceptance](#education-online-banking-vs-loan-acceptance)  
+   - [Undergrad + Income + Age Insights](#undergrad-income-age-insights)  
+   - [Age Group vs Loan Acceptance](#age-group-vs-loan-acceptance)  
+   - [Credit Card Activity vs Loan Acceptance](#credit-card-activity-vs-loan-acceptance)  
+
+</details>
+
+8. [Scorecard Model](#scorecard-model)  
+   - [Predictive Scorecard Approach](#predictive-scorecard-approach)  
+   - [Weight Assignments](#weight-assignments)  
+9. [Visual Dashboard](#visual-dashboard)  
+10. [Final Thoughts & Business Initiatives](#final-thoughts-business-initiatives)  
+11. [Challenges & Limitations](#challenges-limitations)  
+12. [What Is Next](#what-is-next)  
+
+
+
+
 
 1. [Aims of the Project](#aims-of-the-project)  
 2. [Business Problem](#business-problem)  
