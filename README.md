@@ -5,49 +5,47 @@
 ![Tableau](https://img.shields.io/badge/-Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
 ![Excel](https://img.shields.io/badge/-Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
 
-Thera Bank, with a large depositor base, aims to grow its loan portfolio by converting liability customers into asset (loan) customers. A prior campaign achieved a 9% conversion rate, prompting the need for more refined targeting to improve results while reducing costs. This project uses data analysis and visualisation to explore customer behavior and identify patterns among those who accepted a personal loan in a this previous campaign. 
+Thera Bank aims to refine its targeting strategies for personal loan offers to improve conversion rates and reduce marketing spend. This project leverages customer profiling to identify high-value segments, using customer data from a previous campaign where only 9% of customers accepted the loan offer. The objective is to create an actionable plan that increases future loan acceptance rates by targeting the most promising customers based on income, education, family size, and credit behaviors.
 
 ---
-### Table of Contents:
- [ Aims of the Project](#-aims-of-the-project) <br>
- [Business Goal](#-business-goal) <br>
-  [Tools used](#-tools-used) <br>
- [Introducing the Dataset](#️-introducing-the-dataset)   <br>
- [Pre-Analysis Steps](#-pre-analysis-steps)   <br>
- [What Influences Decisions? Ranking Variables by Correlation](#-what-influences-decisions-?-ranking variables-by-correlation) <br>   
- Exploratory Data Analysis (EDA)
-  [Exploratory Data Analysis (EDA)](#-exploratory-data--analysis-(eda)) <br>
- [💼 Final thoughts & business initiatives](#-final-thoughts--business-initiatives) <br>
- [⚠️ Challenges & Limitations](#-challenges--limitations) <br>
- [🚀 What is Next](#-what-is-next)
- > *“Data by itself is silent. Ask it the right questions, and it tells a story.”*
+# Table of Contents
+
+1. [Aims of the Project](#aims-of-the-project)  
+2. [Business Goal](#business-goal)  
+3. [Tools Used](#tools-used)  
+4. [Introducing the Dataset](#introducing-the-dataset)  
+5. [Data Cleaning & Preprocessing](#pre-analysis-steps)  Data Cleaning & Preprocessing
+6. [What Influences Decisions? Ranking Variables by Correlation](#what-influences-decisions-ranking-variables-by-correlation)  
+7. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)  
+   - [Income Groups vs Loan Acceptance](#income-groups-vs-loan-acceptance)  
+   - [Education Levels vs Loan Acceptance](#education-levels-vs-loan-acceptance)  
+   - [Education + Online Banking vs Loan Acceptance](#education-online-banking-vs-loan-acceptance)  
+   - [Undergrad + Income + Age Insights](#undergrad-income-age-insights)  
+   - [Age Group vs Loan Acceptance](#age-group-vs-loan-acceptance)  
+   - [Credit Card Activity vs Loan Acceptance](#credit-card-activity-vs-loan-acceptance)  
+8. [Correlation Analysis](#correlation-analysis)  
+9. [Scorecard Model](#scorecard-model)  
+10. [Visual Dashboard](#visual-dashboard)  
+11. [Final Thoughts & Business Initiatives](#final-thoughts-business-initiatives)  
+12. [Strategic Recommendations](#strategic-recommendations)  
+13. [Challenges & Limitations](#challenges-limitations)  
+14. [What is Next](#what-is-next)  
+
+> *“Data by itself is silent. Ask it the right questions, and it tells a story.”*
+
 <details>
 <summary><strong>📌 </strong></summary></details>
+-----
 
+### Business Problem:
+
+The challenge is to optimize marketing efforts for Thera Bank’s personal loan campaign. Previous campaigns achieved only a 9% conversion rate, highlighting a need for a more targeted, data-driven approach to identify potential customers more likely to accept loan offers.
 
 ### Aims of the Project:
-
-In this project I acted as the data analyst for the Thera Bank. My goal was to:
-- Identify customers with the **highest probability** of accepting personal loan offers.
-- Optimize future marketing campaigns through **segmentation and data-driven targeting**.
-- Build clear, visual dashboards for communicating key metrics and campaign performance.
-- Provide actionable insights to improve customer conversion and **marketing ROI**.
-
----
-
-### Business Goal:
-
-- Build a **predictive profile** of potential loan customers using existing campaign data.
-- Reduce unnecessary marketing spend by focusing on **high-value, high-probability leads**.
-- Improve **campaign success rate** using segmented strategies.
-
-- Improve marketing ROI by targeting high-probability customers.
-- Avoid wasting budget on uninterested or unqualified customers.
-- Use insights to build a reliable, scalable classification model.
-
-
-This is a **binary classification problem**:  
-> **Target Variable**: `Personal Loan` → (1 = Accepted, 0 = Declined)
+In this project I acted as a data analyst for the Thera Bank. My goal was to:
+- Create a customer segmentation strategy based on profiling variables.
+- Focus marketing efforts on the most promising customer segments.
+- Enhance marketing ROI by optimizing resource allocation to high-potential customers.
 
 --------------
 
@@ -61,12 +59,17 @@ This is a **binary classification problem**:
 --------------------
 
 ### Introducing the Dataset:
-The dataset contains demographic and financial attributes of 5,000 Thera Bank customers. The goal is to identify patterns among those who accepted a personal loan during a previous campaign
+The dataset includes 5,000 customers from Thera Bank, with demographic and financial data. The target variable is whether the customer accepted a personal loan (1 = Yes, 0 = No). Key features influencing loan acceptance include:
 
-The dataset contains information about customers and their financial behavior. The main **target variable** is:
-* **Personal Loan**: Whether the customer accepted the loan offer during the last campaign (1 = Yes, 0 = No)
+Income: Higher income brackets correlate with better loan acceptance rates.
 
-<details><summary> **Features (Columns):**</summary>
+Education: Higher education levels (graduate/professional) are linked with better acceptance rates.
+
+Family Size: Larger families show higher loan acceptance rates.
+
+Credit Behavior: Credit card spending and mortgage status help determine financial stability.
+
+<details><summary> **All features (Columns):**</summary>
 
 | Feature            | Description                                              |
 |--------------------|----------------------------------------------------------|
@@ -93,19 +96,19 @@ The dataset contains information about customers and their financial behavior. T
 
 ---
 
-### Pre-Analysis Steps:
+### Data Cleaning & Preprocessing: 
 
-- Performed **initial data profiling** to assess column types, nulls, and distributions
-- Final cleaned dataset:
+Data Cleaning & Transformation:
+The dataset required initial profiling to handle missing values, outliers, and ensure consistency. 
+
   <img width="1778" height="306" alt="image" src="https://github.com/user-attachments/assets/24734d74-5ddd-4929-9c40-280d87009515" />
 
 <details><summary>additional helper columns</summary>
-I also added **additional helper columns** to the dataset, particularly where certain variables needed to be **binned or grouped** to support a more straightforward and meaningful analysis.
-
-This allowed for: 
-- Cleaner segmentation (e.g., income ranges, age brackets)
-- Easier trend identification across categorical variables
-- Improved clarity in pivot tables and visualizations
+I created helper columns to segment customers into meaningful groups based on income and age, making the analysis easier to interpret. For example:
+ 
+ - Income was binned into ranges to identify key brackets. 
+  - Age was categorized into brackets to evaluate different age group behaviors. <br>
+This ensured that the data was ready for segmentation analysis, helping us understand how different groups respond to loan offers
 
 </details>
 
@@ -134,9 +137,7 @@ Firstly, I created a pivot table to analyze how many customers accepted the pers
 
 <br>
 
- - Overall loan acceptance rate = **9.60%**
-  
- - The dataset is highly imbalanced, indicating the need for **further segmentation analysis**.
+Out of 5,000 customers, only 9.6% accepted a loan offer. This low conversion rate indicates that a large portion of the customer base is not being properly targeted. Therefore, we need to explore customer attributes and identify patterns that will allow us to improve future targeting.
 
 -------
 
@@ -144,17 +145,10 @@ Firstly, I created a pivot table to analyze how many customers accepted the pers
 Afterward, I created an additional pivot table to analyze and compare which income groups are more or less likely to accept personal loans, and to identify trends between income level and loan acceptance rates.
 
 <img width="965" height="575" alt="image" src="https://github.com/user-attachments/assets/05ad7369-d288-41cd-a5ac-57ea73870f0e" />
-The trends between income level and loan acceptance rate - 
 
 ##### Key Trends Observed:
-
-- Customers with **income > \$100K**, especially the **150–199K income group** (with **50% loan acceptance rate**), showed **significantly higher acceptance rates**.
-  - This suggests a strong correlation between **income level and willingness or ability to take out loans**.
-  - Potential drivers: **greater creditworthiness**, **financial confidence**, or **eligibility**.
-
-- On the other hand, customers in **lower income groups** show **very low or no loan acceptance**.
-  - This may be due to **lack of eligibility**, **limited need**, or **financial constraints**.
-
+As expected, customers with higher income levels are more likely to accept loans. Notably, customers in the $150K–199K income range show a 50% loan acceptance rate, indicating that financially stable individuals are prime targets. The marketing efforts should focused on customers earning above $100K to maximize conversion. 
+On the other hand, customers in **lower income groups** show **very low or no loan acceptance**. This may be due to **lack of eligibility**, **limited need**, or **financial constraints**.
 
 <details>
 <summary>In-depth Analysis:</summary>
@@ -185,16 +179,11 @@ The trends between income level and loan acceptance rate -
 #### Education Levels vs Personal Loan Acceptance:
 <img width="1167" height="450" alt="image" src="https://github.com/user-attachments/assets/78f25dc2-96a6-47e9-9cb3-ed14a2944dc9" />
  <br>
-Loan acceptance increases with education level as education level 3(Advanced/Professional) has the highest acceptance rate with 13.69%, closely followed by Level 2 (Graduate) with 11.52%.
+Customers with graduate or professional education tend to have higher loan acceptance rates (11.52%, 13.69% respectively), possibly due to better financial understanding or higher disposable income. Focusing on graduate and professional degree holders will improve targeting efficiency.
 
 ##### Key Insights Worth Investigating:
 
-- Customers with **only an Undergraduate degree** make up a significant portion of the overall customer base — **40.06% (2,003 out of 5,000)**.  <br>
-- However, only **4.71% (93)** of them accepted a loan during the last campaign.  <br>
-- This stark contrast suggests a potential barrier to loan adoption among undergraduates — possibly due to **lower income**, **credit constraints**, or **limited financial literacy**.   <br>
-- It would be valuable to investigate:   
-  - Whether **high-income undergraduates** with strong digital and financial understanding are still avoiding loans. 
-  - If **younger undergraduates** are more open to taking out loans compared to older ones.
+Customers with only an undergraduate degree make up a significant portion of the overall customer base, representing **40.06%**(2,003 out of 5,000). However, only **4.71%** (93) of these customers accepted a loan during the last campaign. This stark contrast suggests that there may be barriers preventing loan adoption among undergraduate degree holders. Potential factors could include lower income, credit constraints, or limited financial literacy, all of which may limit their ability or willingness to accept loan offers.
 
 -----
 
@@ -202,26 +191,26 @@ Loan acceptance increases with education level as education level 3(Advanced/Pro
 
 <img width="1064" height="435" alt="image" src="https://github.com/user-attachments/assets/722fc81f-696e-4c57-bfbf-226822abe147" />
 
-🎯 Observation:
-- A similar trend is observed here: while customers with **only an Undergraduate degree** make up the **largest group**, they also show the **lowest loan acceptance rate**.
-- Next, we’ll explore this trend in more detail to understand the underlying drivers.
+The same trend is observed here as well, with the customers who have only an undergraduate degree. They represent the largest group but also exhibit the lowest loan acceptance rate. This highlights a potential challenge in targeting this segment. To understand the underlying factors driving this trend, we will explore the issue in more detail in the next phase of analysis.
 
+- It would be valuable to investigate:   
+  - Whether **high-income undergraduates** with strong digital and financial understanding are still avoiding loans. 
+  - If **younger undergraduates** are more open to taking out loans compared to older ones.
+  
 ----------------
 
 #### 🧑‍🎓 Undergrad + Income + Age Insights:
 
-While the overall data shows undergrads as poor targets, adding income, age, and tenure reveals that some subgroups of undergrads are actually strong prospects. Let's dive deeper and investigate and explore if there is a corelation between the family size, education and loan acceptance:
+While the overall data shows undergrads as poor targets, adding income, age, and tenure reveals that some subgroups of undergrads are actually strong prospects. Let's dive deeper and investigate and explore if there is a corelation between the family size, education and loan acceptance.
 <img width="1049" height="752" alt="image" src="https://github.com/user-attachments/assets/3d891fdf-96db-448c-8df1-636d7323e7ed" />
 
 ##### Key Trends Observed:
 
-**Loan acceptance is strongly correlated with income above $100K**, particularly for customers aged **31–60**.
-   - When targeting customers with **Undergraduate degrees**, focus only on those earning **over $100K** and falling within the **31–60 age range**.
-   - **Family sizes of 3–4 members** are most common among loan accepters in this segment.
+Loan acceptance is strongly linked to income above $100K, especially for customers aged 31–60. When targeting customers with an undergraduate degree, the focus should be on those earning over $100K and in the 31–60 age range. Additionally, family sizes of 3–4 members are most common among loan accepters in this group.
 
 --------
 
-🎯 To validate the pattern across different educational backgrounds, I filtered for customers with Level 2 (Graduate degrees) to see if the trend held true, particularly within similar income and age groups.
+🎯 Curious to see if this pattern held across other educational backgrounds, I filtered for customers with Level 2 (Graduate degrees) to check if the trend persisted, particularly within similar income and age groups.
 
 <br>
 <img width="467" height="292" alt="image" src="https://github.com/user-attachments/assets/65a38716-1104-49ce-b00a-4ab76f3cbe26" />
@@ -229,21 +218,13 @@ While the overall data shows undergrads as poor targets, adding income, age, and
 <img width="800" height="544" alt="image" src="https://github.com/user-attachments/assets/9022f42b-b7a4-404e-8d30-68423cb481f8" />
 <br>
 
-##### Key Trends Observed:
+<details><summary> Key Trends Observed:  </summary>
+Previous data shows that customers with a Graduate degree have a loan acceptance rate of 11.52%. The current table reinforces these earlier insights, revealing that the majority of loans are taken by customers with high incomes ($100K–199K). Notably, these customers are primarily aged 31–60, pointing to a trend of mid-career individuals seeking loans.
 
-- Previous data indicates that customers with a **Graduate degree** have a **loan acceptance rate of 11.52%**.
+Within this high-income, 31–60 age group, loan acceptance is fairly evenly spread across family sizes, though there is a slight skew toward larger families, particularly in the $100K–149K income bracket.
 
-- The current table reinforces earlier insights:
-  - The **majority of loans** are taken by customers with **high incomes ($100K–199K)**.
-  - These customers are primarily aged **31–60**, highlighting mid-career individuals.
-
-- Within this high-income, 31–60 age group:
-  - **Loan acceptance is fairly evenly spread across family sizes**.
-  - There is a **slight skew toward larger families**, especially in the 100–149K bracket.
-
-- However, as **income increases within the 100–199K range**, a trend emerges:
-  - **Family Size 2 becomes increasingly dominant**, suggesting that smaller, higher-income households may be more confident or capable in managing personal loans.
-
+As income rises within the $100K–199K range, an interesting trend emerges: **Family Size 2 becomes increasingly dominant**. This suggests that smaller, higher-income households may be more confident or capable in managing personal loans, possibly due to fewer financial obligations or a greater sense of financial stability.
+</details>
 
 <details><summary> More insights: </summary>
 
@@ -259,25 +240,26 @@ While the overall data shows undergrads as poor targets, adding income, age, and
 #### Age Group vs Personal Loan Acceptance:
 
 <img width="389" height="148" alt="image" src="https://github.com/user-attachments/assets/7ef98cce-7d30-4c0c-bb79-02a679c4d76c" />
+
+#### Age Group vs Income Group vs Personal Loan Acceptance:
+
 <img width="527" height="696" alt="image" src="https://github.com/user-attachments/assets/925696a3-ab2c-4b65-b5aa-dde8f84f2eb8" />
 
+Customers aged 31-60 show higher loan acceptance rates, especially within the $100K–199K income range. This aligns with mid-career professionals who may have a greater need for personal loans. This further suggests we should prioritize this age group for targeted offers.
+
 ------
-#### Age Group vs Income Group vs Personal Loan Acceptance:
 
 #### CCAvg vs Personal Loan Acceptance:
 <img width="406" height="129" alt="image" src="https://github.com/user-attachments/assets/0485349b-b80d-4ba7-902e-323876f4ca35" />
 
-- Higher credit card spending correlates with higher loan interest
-- Too low = low financial activity
-- Too high = potential debt risk
+Higher credit card spending correlates with higher loan acceptance, suggesting that customers who are already engaged in financial activity are more willing to take on personal debt. We should target customers who have a high CCAvg and mortgages, as they may be more open to borrowing.
 
 ----
 
 ##### CD Account + CCAvg + Securities Account vs. Loan Acceptance:
 <img width="1307" height="394" alt="image" src="https://github.com/user-attachments/assets/1bad3cc7-7684-4029-8ded-53bb66128eb7" />
-- Big credit spenders may be more comfortable with debt, making them warmer leads. 
-- Customers with both **CD Accounts + High CCAvg** are highly loan-active
-- Multiple financial products signal trust and engagement
+
+Big credit spenders tend to be more comfortable with debt, making them warmer leads for loan offers. Customers who hold both CD Accounts and have a High CCAvg are especially active in taking out loans, suggesting they are more engaged with their finances. Additionally, having multiple financial products indicates a higher level of trust and engagement, making these customers prime targets for loan offers.
 
 ---
 ##### Mortgage vs Loan Acceptance:
@@ -288,12 +270,28 @@ While the overall data shows undergrads as poor targets, adding income, age, and
 <img width="794" height="410" alt="image" src="https://github.com/user-attachments/assets/fcc98689-e312-4321-8e17-e4bdda70b3c0" />
 - Moderate mortgage customers tend to be more open to personal loans
 - Mortgage + Credit Activity = solid targeting vector
+
+
 ----
 
 ### Correlation Analysis 
 Following the exploratory analysis, we computed correlation coefficients to quantitatively assess which variables are most predictive of loan acceptance. Income and credit card spending emerged as the strongest indicators, guiding the creation of our predictive scorecard.
 
+--------
+
 ###  Scorecard Model 
+
+Predictive Scorecard Approach:
+"Using the correlation analysis, we can build a simple scorecard by assigning weights to key factors:
+
+Income (weight: 40%)
+
+Education level (weight: 30%)
+
+Credit Card Spending (weight: 20%)
+
+Age Group (weight: 10%)
+Customers scoring above a certain threshold will be targeted with loan offers in the next campaign."
 
 
 Visual Dashboard or Summary Sheet
@@ -316,16 +314,22 @@ Customers with CD + high income + high credit card usage are goldmine targets.
 
 
 
+Actionable Recommendations:
 
+Target customers earning >$100K, especially in the $100K–199K range, for the next campaign to maximize conversions.
+Focus marketing on customers aged 31-60 with a graduate or professional education, as this group shows the highest interest in personal loans.
 
+Utilize digital channels to reach customers who have multiple financial products, such as credit cards or mortgages.
 
-## ✅ Strategic Recommendations
-
-| Action                              | Rationale                                       |
-|-------------------------------------|-------------------------------------------------|
-| Target income > \$100K              | Highest acceptance across all segments          |
-| Focus on graduates & professionals  | Education is a strong predictor                 |
-| Use digital channels (email, online)| Best ROI with educated + online banking users   |
-| Segment undergrads by income/age    | Avoid broad targeting—focus on qualified leads  |
 
 ---
+Strategic Business Initiatives
+
+### Conclusion 
+
+By focusing on high-income, educated customers who are active in financial activities, Thera Bank can significantly increase conversion rates while reducing wasted marketing spend. The insights provided here will help the marketing team target the right audience with the right offer, optimizing both the campaign’s success and ROI."
+
+## What Is Next
+
+- The feature ZIP Code isn’t mentioned after being introduced, which could be a valuable aspect for segmentation (e.g., regional targeting). If it’s not relevant, why include it in the first place?
+- a tableau dashboard
