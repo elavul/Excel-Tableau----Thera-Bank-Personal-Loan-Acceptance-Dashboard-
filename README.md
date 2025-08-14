@@ -39,8 +39,6 @@ Thera Bank aims to refine its targeting strategies for personal loan offers to i
   
 > *“Data by itself is silent. Ask it the right questions, and it tells a story.”*
 
-<details>
-<summary><strong>📌 </strong></summary></details>
 -----
 
 ### Business Problem:
