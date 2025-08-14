@@ -10,7 +10,6 @@ Thera Bank aims to refine its targeting strategies for personal loan offers to i
 ---
 # Table of Contents
 
-# Table of Contents
 
 1. [Aims of the Project](#aims-of-the-project)  
 2. [Business Problem](#business-problem)  
@@ -20,31 +19,26 @@ Thera Bank aims to refine its targeting strategies for personal loan offers to i
 6. [What Influences Decisions? Ranking Variables by Correlation](#what-influences-decisions-ranking-variables-by-correlation)  
    - [Correlation Matrix](#correlation-matrix)  
    - [Key Insights](#key-insights)  
-7. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)  
-   - [Income Groups vs Loan Acceptance](#income-groups-vs-loan-acceptance)  
-   - [Education Levels vs Loan Acceptance](#education-levels-vs-loan-acceptance)  
-   - [Education + Online Banking vs Loan Acceptance](#education-online-banking-vs-loan-acceptance)  
-   - [Undergrad + Income + Age Insights](#undergrad-income-age-insights)  
-   - [Age Group vs Loan Acceptance](#age-group-vs-loan-acceptance)  
-   - [Credit Card Activity vs Loan Acceptance](#credit-card-activity-vs-loan-acceptance)  
-8. [Correlation Analysis](#correlation-analysis)  
-   - [Quantitative Assessment](#quantitative-assessment)  
-   - [Key Predictive Variables](#key-predictive-variables)  
-9. [Scorecard Model](#scorecard-model)  
+<details>
+  <summary> 7. Exploratory Data Analysis (EDA)</summary>
+  
+  - [Income Groups vs Loan Acceptance](#income-groups-vs-loan-acceptance)  
+  - [Education Levels vs Loan Acceptance](#education-levels-vs-loan-acceptance)  
+  - [Education + Online Banking vs Loan Acceptance](#education-online-banking-vs-loan-acceptance)  
+  - [Undergrad + Income + Age Insights](#undergrad-income-age-insights)  
+  - [Age Group vs Loan Acceptance](#age-group-vs-loan-acceptance)  
+  - [Credit Card Activity vs Loan Acceptance](#credit-card-activity-vs-loan-acceptance)  
+
+</details>
+
+8. [Scorecard Model](#scorecard-model)  
    - [Predictive Scorecard Approach](#predictive-scorecard-approach)  
    - [Weight Assignments](#weight-assignments)  
-10. [Visual Dashboard](#visual-dashboard)  
-   - [Overview of Dashboard Design](#overview-of-dashboard-design)  
-   - [Key Insights from the Dashboard](#key-insights-from-the-dashboard)  
-11. [Final Thoughts & Business Initiatives](#final-thoughts-business-initiatives)  
-    - [Insights and Conclusions](#insights-and-conclusions)  
-    - [Strategic Recommendations](#strategic-recommendations)  
-12. [Challenges & Limitations](#challenges-limitations)  
-    - [Data Quality & Limitations](#data-quality-limitations)  
-    - [External Factors](#external-factors)  
-13. [What Is Next](#what-is-next)  
-    - [Exploring Regional Targeting](#exploring-regional-targeting)  
-    - [Further Enhancements in Segmentation](#further-enhancements-in-segmentation)  
+9. [Visual Dashboard](#visual-dashboard)  
+10. [Final Thoughts & Business Initiatives](#final-thoughts-business-initiatives)  
+11. [Challenges & Limitations](#challenges-limitations)  
+12. [What Is Next](#what-is-next)  
+  
 
 ---
 
