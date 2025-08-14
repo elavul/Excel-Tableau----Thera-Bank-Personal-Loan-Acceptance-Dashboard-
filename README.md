@@ -18,9 +18,11 @@ Thera Bank aims to refine its targeting strategies for personal loan offers to i
 5. [Data Cleaning & Preprocessing](#data-cleaning-preprocessing)  
 6. [What Influences Decisions? Ranking Variables by Correlation](#what-influences-decisions-ranking-variables-by-correlation)  
    - [Correlation Matrix](#correlation-matrix)  
-   - [Key Insights](#key-insights)  
+   - [Key Insights](#key-insights)
+  
+7. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)  
 <details>
-  <summary> 7. Exploratory Data Analysis (EDA)</summary>
+  <summary> 7. Exploratory Data Analysis questions explored(EDA)</summary>
   
   - [Income Groups vs Loan Acceptance](#income-groups-vs-loan-acceptance)  
   - [Education Levels vs Loan Acceptance](#education-levels-vs-loan-acceptance)  
