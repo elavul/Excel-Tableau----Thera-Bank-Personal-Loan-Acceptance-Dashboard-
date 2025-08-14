@@ -1,4 +1,4 @@
-# Thera Bank – Personal Loan Acceptance Dashboard
+ # Thera Bank – Personal Loan Acceptance Dashboard
 (Customer Profiling + Targeting Strategy)
 
  
@@ -330,6 +330,8 @@ Following the exploratory analysis, we computed correlation coefficients to quan
 --------
 
 ###  Scorecard Model 
+The most obvious next step is to target the customers with the highest scores for loan offers. These are customers who fit your criteria across all the key factors (income, education, spending, and age).
+
 
 Predictive Scorecard Approach:
 "Using the correlation analysis, we can build a simple scorecard by assigning weights to key factors:
