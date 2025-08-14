@@ -10,8 +10,62 @@ Thera Bank aims to refine its targeting strategies for personal loan offers to i
 ---
 # Table of Contents
 
+# Table of Contents
+
 1. [Aims of the Project](#aims-of-the-project)  
-2. [Business Goal](#business-goal)  
+2. [Business Problem](#business-problem)  
+3. [Tools Used](#tools-used)  
+   - [Excel](#excel)  
+   - [Tableau](#tableau)  
+4. [Introducing the Dataset](#introducing-the-dataset)  
+5. [Data Cleaning & Preprocessing](#data-cleaning-preprocessing)  
+   - [Handling Missing Values & Outliers](#handling-missing-values-and-outliers)  
+   - [Feature Engineering](#feature-engineering)  
+6. [What Influences Decisions? Ranking Variables by Correlation](#what-influences-decisions-ranking-variables-by-correlation)  
+   - [Correlation Matrix](#correlation-matrix)  
+   - [Key Insights](#key-insights)  
+7. [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)  
+   - [Income Groups vs Loan Acceptance](#income-groups-vs-loan-acceptance)  
+   - [Education Levels vs Loan Acceptance](#education-levels-vs-loan-acceptance)  
+   - [Education + Online Banking vs Loan Acceptance](#education-online-banking-vs-loan-acceptance)  
+   - [Undergrad + Income + Age Insights](#undergrad-income-age-insights)  
+   - [Age Group vs Loan Acceptance](#age-group-vs-loan-acceptance)  
+   - [Credit Card Activity vs Loan Acceptance](#credit-card-activity-vs-loan-acceptance)  
+8. [Correlation Analysis](#correlation-analysis)  
+   - [Quantitative Assessment](#quantitative-assessment)  
+   - [Key Predictive Variables](#key-predictive-variables)  
+9. [Scorecard Model](#scorecard-model)  
+   - [Predictive Scorecard Approach](#predictive-scorecard-approach)  
+   - [Weight Assignments](#weight-assignments)  
+10. [Visual Dashboard](#visual-dashboard)  
+   - [Overview of Dashboard Design](#overview-of-dashboard-design)  
+   - [Key Insights from the Dashboard](#key-insights-from-the-dashboard)  
+11. [Final Thoughts & Business Initiatives](#final-thoughts-business-initiatives)  
+    - [Insights and Conclusions](#insights-and-conclusions)  
+    - [Strategic Recommendations](#strategic-recommendations)  
+12. [Challenges & Limitations](#challenges-limitations)  
+    - [Data Quality & Limitations](#data-quality-limitations)  
+    - [External Factors](#external-factors)  
+13. [What Is Next](#what-is-next)  
+    - [Exploring Regional Targeting](#exploring-regional-targeting)  
+    - [Further Enhancements in Segmentation](#further-enhancements-in-segmentation)  
+
+---
+
+### **Aims of t**
+
+
+
+
+
+
+
+
+
+
+
+1. [Aims of the Project](#aims-of-the-project)  
+2. [Business Problem](#business-goal)  
 3. [Tools Used](#tools-used)  
 4. [Introducing the Dataset](#introducing-the-dataset)  
 5. [Data Cleaning & Preprocessing](#pre-analysis-steps)  Data Cleaning & Preprocessing
